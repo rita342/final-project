@@ -6,6 +6,14 @@
     font-family: Lucida Handwriting, Brush Script MT,cursive;
   }
 
+  .card{
+   transform:  translate(0px); 
+   transition:1.1s all;
+  }
+  .card:hover{
+   box-shadow: 6px 6px 40px 10px #5F488BFF;
+   transform: translateX(20px);
+   }
 
 .nav-link,
 .current {

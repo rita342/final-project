@@ -5,7 +5,7 @@ import { Link} from 'react-router-dom'
 import {  withRouter } from 'react-router'
 
 const MyNavbar = ({ brand, history, location, match }) => (
-    <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="md" bg="white" variant="white">
         <Link to="/">
             <Navbar.Brand>{brand}</Navbar.Brand>
         </Link>
@@ -15,7 +15,7 @@ const MyNavbar = ({ brand, history, location, match }) => (
                 <div className="nav-link" onClick={() => {
                     console.log('hello!')
                     history.push('/menu')
-                }} style={{ cursor: 'pointer' }}>Menu</div>
+                }} style={{ cursor: 'pointer' }}>clik</div>
                 <Link to="/reservations">
                     <div className={location.pathname === '/reservations' ? 'nav-link active' : 'nav-link'}>Reservations</div>
                 </Link>

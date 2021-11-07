@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <MyNavbar brand="Strivestaurant" />
+        <MyNavbar brand="Home" />
         <Switch>
           <Route 
           path="/"

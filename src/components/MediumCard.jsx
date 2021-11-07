@@ -14,29 +14,30 @@ import {Col,Container,Row,Image} from 'react-bootstrap'
             <Container style={{marginTop:'5rem'}}>
             <Row>
     <Col xs={12} md={6} lg={6} xl={3}>
-    
-              <Image src={img1} layout="fill" style={{width:'270px',borderRadius:'10px'}}/>   
+    <div class="card">
+              <Image src={img1} layout="fill" style={{}}/>   
               <h5>Outdoor getways</h5>  
-         
+              </div>
          </Col>
     <Col  xs={12} md={6} lg={6} xl={3}> 
     
-          
-          <Image src={img2} layout="fill" style={{width:'270px',borderRadius:'10px'}}/>  
+    <div class="card">
+          <Image src={img2} layout="fill" />  
           <h5>Unique Stays</h5>     
-     
+          </div>
      </Col>
     <Col xs={12} md={6} lg={6} xl={3}> 
-    
-     <Image src={img3} layout="fill" style={{width:'270px',borderRadius:'10px'}}/>  
+      
+    <div class="card">
+     <Image src={img3} layout="fill" />  
      <h5>Entire homes</h5>     
-
+     </div>
 </Col>
     <Col xs={12} md={6} lg={6} xl={3}>
-   
- <Image src={imgpet} layout="fill" style={{width:'270px',borderRadius:'10px'}}/>  
+    <div class="card"> 
+ <Image src={imgpet} layout="fill"/>  
  <h5>Pet allowed</h5>     
-
+ </div>
 </Col>
   </Row>
   
