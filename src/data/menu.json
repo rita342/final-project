@@ -1,0 +1,83 @@
+[
+  {
+    "id": "11",
+    "location": "Sweden",
+    "img": "http://dfw.cbslocal.com/wp-content/uploads/sites/15909545/2014/02/crop_down21.jpg",
+    "price": 550,
+     "Number of rooms":"Six (including Dragonfly, The Blue Cone, and The UFO)",
+    "description": "Height off the ground: 13 to 20ft; some suspended, some on stilts Why stay? As much a showcase for Sweden’s top architects as it is a hotel, this enclave in a pine forest boasts modern,eccentric-designed treehouses that resemble the likes of bird nests, mirrored cubes, and UFOs."
+  },
+ {
+    "id": "12",
+    "location": "Columbia",
+    "img": "http://dfw.cbslocal.com/wp-content/uploads/sites/15909545/2014/02/crop_down20.jpg",
+    "price": 155,
+     "Number of rooms":"Three (each with a hippy-dippy name, including Eve, Eryn, and Melody)",
+    "description": "Height off the ground: The spheres are “suspended like pendants from a web of rope”, 10 to 15ft above the forest floor Why stay? ‘Cause you’ll be gently rocked to sleep in a floating cedar/ spruce orb dangling in an old-growth forest. Is that not enough?"
+  },
+{
+    "id": "13",
+    "location": "Australia",
+    "img": "http://dfw.cbslocal.com/wp-content/uploads/sites/15909545/2014/02/crop_down19.jpg",
+    "price": 195,
+     "Number of rooms":" Six (including Trillium, The Upper Pond, and The Temple of the Blue Moon)",
+    "description": "Height off the ground: A couple of stories at most, accessible by ladders or stairs   Why stay? The work of a “world-renowned treehouse builder”, this B&B just outside Seattle boasts rustic-but-modern cabins decorated with leather chairs,   cedar beds, and private balconies. The place also rocks a Summer concert series and serves as a tourable nature conservancy."
+  },
+ {
+    "id": "14",
+    "location": "France",
+    "img": "http://dfw.cbslocal.com/wp-content/uploads/sites/15909545/2014/02/crop_down18.jpg",
+    "price": 325,
+     "Number of rooms":"Three",
+    "description": "Height off the ground: Built on stilts among chestnut and oak trees, they aren’t as high as some of their suspended counterparts  Why stay? “Modeled after a traditional French chateaux”, these three elevated castle houses in SW France’s Dordogne    include a terraced hot tub and ground-level infinity pool."
+  },
+{
+    "asin": "15",
+    "location": "Costa Rica",
+    "img": "http://dfw.cbslocal.com/wp-content/uploads/sites/15909545/2014/02/crop_down17.jpg",
+    "price": 50,
+     "Number of rooms":"Eight",
+    "description": "Up to 90ft off the forest floor  Why stay? Not to be confused with George and Estelle’s “Del Boca Vista”, FB’s a sustainable treehouse community (AKA a commune of earthy young expats)   situated in the canopy of the Costa Rican rainforest on the Pacific Coast. They’re nice enough to let you join them in surfing, hiking, and zip-lining   between treehouses; you can also buy a lot and build your own."
+  },
+{
+    "id": "16",
+    "location": "Peru",
+    "img": "http://dfw.cbslocal.com/wp-content/uploads/sites/15909545/2014/02/crop_down16.jpg",
+    "price": 400,
+     "Number of rooms":"One",
+    "description": "Linked by a suspension bridge to the resort’s quarter-mile 103ft-high canopy walk (of which you’ll get a spectacular night-time tour),  you’re pretty much sleeping with the wildlife in this cabin boasting a traditional “Ese-Eja design of palm thatched roof and wooden floors”. You even get walkie talkies in order to call the Canopy Butler."
+  },
+ {
+    "id": "17",
+    "location": "China",
+    "img": "http://dfw.cbslocal.com/wp-content/uploads/sites/15909545/2014/02/crop_down15.jpg",
+    "price": 96,
+     "Number of rooms":"Four",
+    "description": "Height off the ground: Varies  Why stay? Built into old tamarind trees near a “new 5,000 acre Buddhist and ecological theme park complete with temples, pagodas, (and) botanical gardens”,   these perfect-for-groups   treehouses offer beach access, views of the South China Sea, and can sleep up to 20 guests over three levels."
+  },
+ {
+    "id": "18",
+    "location": "Chile",
+    "img": "http://dfw.cbslocal.com/wp-content/uploads/sites/15909545/2014/02/crop_down14.jpg",
+    "price": 55,
+     "Number of rooms":"Six (including Dragonfly, The Blue Cone, and The UFO)",
+    "description": "Height off the ground: One building rather than individual cabins, it reaches seven stories    Why stay? Floor-to-ceiling windows and private balconies offer views of both the Patagonian Andes and Mocho Choshuenco Volcano.  There’s also rainforest showers, two restaurants, and a full pool and spa below. Take a closer look here."
+  },
+{
+    "id": "19",
+    "location": "Thailand",
+    "img": "http://dfw.cbslocal.com/wp-content/uploads/sites/15909545/2014/02/crop_down13.jpg",
+    "price": 125,
+     "Number of rooms":"12 (including one with no walls or ceiling called the “View with a Room”)",
+    "description": "Height off the ground: Up to 23ft in the air Why stay? Opened in 2012 and inspired by Thoreau’s Walden Pond, this elevated oasis in the heart of the big city admits it’s “not for everyone” and,  in addition to sleek treetop rooms and gratis cell phones, rents a floating double-bed called the River Nest. Seriously, it’s just a bed on the water"
+  },
+{
+    "id": "10",
+    "location": "Brazil",
+    "img": "http://dfw.cbslocal.com/wp-content/uploads/sites/15909545/2014/02/crop_down12.jpg",
+    "price": 476,
+     "Number of rooms":" 268 treetop rooms, suites, and houses connected by over 5mi of 30ft-high wooden catwalks",
+    "description": "Height off the ground: Almost everything sits at canopy level (35ft), although their highest cabin, the Tarzan House, is nestled 72ft up a living Mahogany tree  Why stay? Billed as the “largest treetop hotel in the world”, rooms like The Jacques Cousteau and Discovery boast private balconies and stunning views of both the jungle and Negro River. There’s even a treetop swimming pool. "
+  }
+ 
+]
