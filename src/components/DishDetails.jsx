@@ -9,21 +9,18 @@ const DishDetails = ({ match }) => {
     useEffect(() => {
         let retrievedIdFromURL = match.params.pastaId
 
-        // old way parsing a query string
-        // let urlQuery = new URLSearchParams(window.location.search)
-        // let retrievedIdFromURL = urlQuery.get('pastaId')
+       
         let foundPasta = items.find(pasta => pasta.id.toString() === retrievedIdFromURL)
         // 1 !== '1'
         console.log(foundPasta)
         setPastaItem(foundPasta)
-        // the next line is a special comment for suppressing unnecessary hooks warnings
-        // if you are sure of what you're doing :)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+      
     }, [])
 
     return (
+        <div className="DishDetails"style={{backgroundImage:`url("https://images.pexels.com/photos/289586/pexels-photo-289586.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=3000")`}}>
         <Container>
-            <Row className="justify-content-center">
+            <Row className="justify-content-start">
                 {
                     typeof pastaItem === 'undefined'
                         ? (
@@ -34,21 +31,34 @@ const DishDetails = ({ match }) => {
                                 <p>LOADING...</p>
                             )
                             : (
+                                <>
                                 <Col md={8} className="text-center">
-                                    <Card>
-                                        <Card.Img variant="top" src={pastaItem.img} />
-                                        <Card.Body>
-                                            <Card.Title></Card.Title>
-                                            <Card.Text>
-                                                {pastaItem.location}
-                                            </Card.Text>
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
+                                      <Card style={{width:'300px',marginTop:'40px'}}>
+    <Card.Img variant="top" src={pastaItem.img} style={{width:'300px'}}/>
+    <Card.Body>
+      <Card.Title>add to my store</Card.Title>
+    
+    </Card.Body>
+   
+  </Card></Col>
+ <Col>
+ <div className="">
+                        <h4 style={{alignItems:'center',fontFamily:'Lucida Handwriting, Brush Script MT,cursive',color:'pink',marginTop:'30px'}}>
+                            {pastaItem.location}
+                           
+                 
+                        </h4>
+                        <p style={{color:'white',fontSize:'15px'}}> {pastaItem.description}</p>
+    <button style={{backgroundColor:'transparent',border:'0.5px solid grey',borderRadius:'10px',color:'white'}}>Learn More</button> 
+    </div>
+ </Col>
+  </>
+                                
                             )
                 }
             </Row>
         </Container>
+        </div>
     )
 }
 

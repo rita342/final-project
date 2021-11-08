@@ -17,7 +17,7 @@ function App() {
   // advanced stuff!
   // const myFunction = () => console.log('hello')
   return (
-    <div>
+    <div stye={{backgroundImage:`url("https://images.pexels.com/photos/242201/pexels-photo-242201.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")`}}>
       <BrowserRouter>
       <MyNavbar brand="Airbnb"/>
         <Switch>
@@ -26,22 +26,15 @@ function App() {
            exact render={(routerProps)=> <Home{...routerProps} subtitle="wellcome tp tree house"/>}
    />
           <Route path="/reservations" exact component={Reservations} />
-          <Route path="/menu" exact component={Menu} style={{backgroundColor:'black'}} />
+          <Route path="/menu" exact component={Menu} />
           {/* Route is taking our component as a prop, and returning something new! */}
           {/* it's creating a HOC - Higher-order component */}
 
           <Route path="/details/:pastaId" component={DishDetails} />
-          {/* valid routes can be /details/0, /details/strive, /details/whatever */}
+          
 
-          {/* with the render prop (instead of component) you can pass your own props to the component! */}
-          {/* the render prop takes a function and returns a component Tag */}
-          {/* but now this component is not receiving automatically history, location and match anymore! */}
-          {/* luckily, those props are safely stored in the only argument the render function is accepting */}
-          {/* so we can safely spread the content of that parameter in the props of our component */}
           <Route component={() => <h1>404</h1>} />
-          {/* the Switch statement will stop whenever a specific route is found, */}
-          {/* it's the simplest way of defining a fallback case for displaying like */}
-          {/* a 404 page when a url does not match any route */}
+       
         </Switch>
        
       </BrowserRouter>

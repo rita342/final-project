@@ -9,9 +9,9 @@ import { FaUserCircle  } from "react-icons/fa";
 
 
 const MyNavbar = ({ brand, history, location, match }) => (
-    <Navbar collapseOnSelect expand="md" bg="green" variant="white" style={{backgroundColor:'#2F4F4F'}}>
+    <Navbar collapseOnSelect expand="md" bg="pink" variant="white" style={{backgroundImage:`url("https://images.pexels.com/photos/1039083/pexels-photo-1039083.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000")`}}>
         <Link to="/">
-          <h1 style={{color:'white'}}>  <Navbar.Brand>{brand}<FaAirbnb style={{fontSize:'30px',color:'white'}}/></Navbar.Brand></h1>
+          <h1 style={{color:'pink'}}>  <Navbar.Brand>{brand}<FaAirbnb style={{fontSize:'30px',color:'pink'}}/></Navbar.Brand></h1>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -19,11 +19,11 @@ const MyNavbar = ({ brand, history, location, match }) => (
                 <div className="nav-link" onClick={() => {
                     console.log('hello!')
                     history.push('/menu')
-                }} style={{ cursor: 'pointer'}}><MdOutlineHouseSiding style={{fontSize:'30px',color:'white'}}/></div>
+                }} style={{ cursor: 'pointer'}}><MdOutlineHouseSiding style={{fontSize:'30px',color:'pink'}}/></div>
                 <Link to="/reservations">
-                    <div className={location.pathname === '/reservations' ? 'nav-link active' : 'nav-link'}><BiGlobe style={{fontSize:'30px',color:'white'}}/></div>
+                    <div className={location.pathname === '/reservations' ? 'nav-link active' : 'nav-link'}><BiGlobe style={{fontSize:'30px',color:'pink'}}/></div>
                 </Link>
-                <Nav.Link><FaUserCircle style={{fontSize:'30px',color:'white'}}/></Nav.Link>
+                <Nav.Link><FaUserCircle style={{fontSize:'30px',color:'pink'}}/></Nav.Link>
             </Nav>
         </Navbar.Collapse>
     </Navbar>
