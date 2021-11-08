@@ -5,7 +5,7 @@ import img2 from '../images/img2.jpg'
 
 const Menu = ({ history }) => {
     return(
-<div className="Menu"style={{backgroundImage:`url("https://images.pexels.com/photos/5990226/pexels-photo-5990226.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2500")` ,padding:'30px'}}>
+<div className="Menu"style={{backgroundImage:`url("https://latenitesunlite.files.wordpress.com/2014/10/wood-texture-rnhi1ed1.jpg")` ,padding:'30px'}}>
     <Container id="container">
         {
             items.map(house => (

@@ -18,7 +18,7 @@ const DishDetails = ({ match }) => {
     }, [])
 
     return (
-        <div className="DishDetails"style={{backgroundImage:`url("https://images.pexels.com/photos/289586/pexels-photo-289586.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=3000")`}}>
+        <div className="DishDetails"style={{backgroundImage:`url("https://ipt.imgix.net/200427/x/0/iceland-photo-tours-iurie55.jpg?ar=1.91%3A1&w=1400&fit=crop")`,repeat:'norepeat'}}>
         <Container>
             <Row className="justify-content-start">
                 {
@@ -33,31 +33,33 @@ const DishDetails = ({ match }) => {
                             : (
                                 <>
                                 <Col md={8} className="text-center">
-                                      <Card style={{width:'300px',marginTop:'40px'}}>
-    <Card.Img variant="top" src={pastaItem.img} style={{width:'300px'}}/>
-    <Card.Body>
-      <Card.Title>add to my store</Card.Title>
-    
-    </Card.Body>
-   
-  </Card></Col>
- <Col>
- <div className="">
+                                <div className="card" style={{marginTop:'50px',borderRadius:'20px',background:'transparent',textAlign:'center',border:'1px solid grey',marginBottom:'200px'}}>
+                                
                         <h4 style={{alignItems:'center',fontFamily:'Lucida Handwriting, Brush Script MT,cursive',color:'pink',marginTop:'30px'}}>
                             {pastaItem.location}
                            
                  
                         </h4>
-                        <p style={{color:'white',fontSize:'15px'}}> {pastaItem.description}</p>
-    <button style={{backgroundColor:'transparent',border:'0.5px solid grey',borderRadius:'10px',color:'white'}}>Learn More</button> 
+
+                        <p style={{color:'white',fontSize:'15px'}}>Number Of Rooms:{pastaItem.rooms}</p>
+                        <p style={{color:'white',fontSize:'15px'}}>Number Of Rooms:{pastaItem.description}</p>
+                        <p style={{color:'white',fontSize:'15px'}}>Total Price: {pastaItem.price}$</p>
+                        <button style={{backgroundColor:'transparent',border:'0.5px solid grey',borderRadius:'10px',color:'white',width:'150px',marginLeft:'20rem',marginBottom:'20px'}}>Add To your list</button>
     </div>
- </Col>
+    </Col>
+
+ 
+   
+ 
   </>
                                 
                             )
                 }
             </Row>
         </Container>
+        <div>
+        
+        </div>
         </div>
     )
 }
