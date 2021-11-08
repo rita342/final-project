@@ -35,11 +35,11 @@ const DishDetails = ({ match }) => {
                                 <Col md={8} className="text-center">
                                 <div className="card" style={{marginTop:'50px',borderRadius:'20px',background:'transparent',textAlign:'center',border:'1px solid grey',marginBottom:'200px'}}>
                                 
-                        <h4 style={{alignItems:'center',fontFamily:'Lucida Handwriting, Brush Script MT,cursive',color:'pink',marginTop:'30px'}}>
+                        <h2 style={{alignItems:'center',fontFamily:'Lucida Handwriting, Brush Script MT,cursive',color:'black',marginTop:'30px'}}>
                             {pastaItem.location}
                            
                  
-                        </h4>
+                        </h2>
 
                         <p style={{color:'white',fontSize:'15px'}}>Number Of Rooms:{pastaItem.rooms}</p>
                         <p style={{color:'white',fontSize:'15px'}}>Number Of Rooms:{pastaItem.description}</p>
