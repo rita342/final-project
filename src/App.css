@@ -1,3 +1,7 @@
+body{
+    background: rgb(16, 1, 41);
+}
+
 #tree{
     position:absolute;
     top:10%;
@@ -5,7 +9,15 @@
     color:white;
     font-family: Lucida Handwriting, Brush Script MT,cursive;
   }
+  
+ 
+  #container{
+   background-image: linear-gradient(rgba(83, 82, 82, 0.7),rgba(112, 104, 104, 0.7))url("https://th.bing.com/th/id/OIP.DxImpMx_CSKBWWgoHNITbQHaEK?w=321&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7");
 
+   
+   
+   }
+  
   .card{
    transform:  translate(0px); 
    transition:1.1s all;

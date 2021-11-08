@@ -7,6 +7,7 @@ import { BrowserRouter , Route} from 'react-router-dom'
 import Menu from './components/Menu'
 import {Switch } from 'react-router'
 import DishDetails from './components/DishDetails'
+import { FaAirbnb } from "react-icons/fa";
 import './App.css';
 
 
@@ -18,14 +19,14 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <MyNavbar brand="Home" />
+      <MyNavbar brand="Airbnb"/>
         <Switch>
           <Route 
           path="/"
            exact render={(routerProps)=> <Home{...routerProps} subtitle="wellcome tp tree house"/>}
    />
           <Route path="/reservations" exact component={Reservations} />
-          <Route path="/menu" exact component={Menu} />
+          <Route path="/menu" exact component={Menu} style={{backgroundColor:'black'}} />
           {/* Route is taking our component as a prop, and returning something new! */}
           {/* it's creating a HOC - Higher-order component */}
 

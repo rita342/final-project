@@ -1,13 +1,17 @@
 // import { Navbar, Nav } from 'react-bootstrap'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
+import {Navbar,Nav,Button} from 'react-bootstrap'
+import { MdOutlineHouseSiding } from "react-icons/md";
 import { Link} from 'react-router-dom'
 import {  withRouter } from 'react-router'
+import { FaAirbnb } from "react-icons/fa";
+import { BiGlobe } from "react-icons/bi";
+import { FaUserCircle  } from "react-icons/fa";
+
 
 const MyNavbar = ({ brand, history, location, match }) => (
-    <Navbar collapseOnSelect expand="md" bg="white" variant="white">
+    <Navbar collapseOnSelect expand="md" bg="green" variant="white" style={{backgroundColor:'#2F4F4F'}}>
         <Link to="/">
-            <Navbar.Brand>{brand}</Navbar.Brand>
+          <h1 style={{color:'white'}}>  <Navbar.Brand>{brand}<FaAirbnb style={{fontSize:'30px',color:'white'}}/></Navbar.Brand></h1>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -15,11 +19,11 @@ const MyNavbar = ({ brand, history, location, match }) => (
                 <div className="nav-link" onClick={() => {
                     console.log('hello!')
                     history.push('/menu')
-                }} style={{ cursor: 'pointer' }}>clik</div>
+                }} style={{ cursor: 'pointer'}}><MdOutlineHouseSiding style={{fontSize:'30px',color:'white'}}/></div>
                 <Link to="/reservations">
-                    <div className={location.pathname === '/reservations' ? 'nav-link active' : 'nav-link'}>Reservations</div>
+                    <div className={location.pathname === '/reservations' ? 'nav-link active' : 'nav-link'}><BiGlobe style={{fontSize:'30px',color:'white'}}/></div>
                 </Link>
-                <Nav.Link>Contact us</Nav.Link>
+                <Nav.Link><FaUserCircle style={{fontSize:'30px',color:'white'}}/></Nav.Link>
             </Nav>
         </Navbar.Collapse>
     </Navbar>

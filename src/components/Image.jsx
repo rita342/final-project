@@ -1,0 +1,1 @@
+<img src="https://links.papreact.com/0fm" alt="display image" />

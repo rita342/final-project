@@ -1,45 +1,178 @@
-import React, { Component } from 'react';
-import imgpet from '../images/img-pet.jpg'
-import img1 from '../images/img1.jpg'
-import img2 from '../images/img2.jpg'
-import img3 from '../images/img3.jpg'
-import {Col,Container,Row} from 'react-bootstrap'
+import { useState } from "react";
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
+// name -> string
+// phone -> string | number
+// numberOfPeople -> string | number
+// smoking -> boolean
+// dateTime -> string
+// specialRequests -> string
 
+const ReservationForm = () => {
 
-class Main extends Component {
-    render() {
-        return (
-            <Container>
-                <Row className="flex flex-wrap  disply-inline">
-                    <Col xs={12}sm={12} md={6} lg={3} xl={3}>  
+    // state = {
+    //     reservation: {
+    //         name: '',
+    //         phone: '',
+    //         numberOfPeople: 1,
+    //         smoking: false,
+    //         dateTime: '',
+    //         specialRequests: '',
+    //     }
+    // }
 
-          <div className=" flex item-center m-2 mt-5 space-x-4 
-">
-              <img src={img1} layout="fill" style={{width:'300px',borderRadius:'10px'}}/>   
-              <h4>Outdoor getways</h4>  
-         </div>
-          <div className=" flex item-center m-2 mt-5 space-x-4 
-">
-          <img src={img2} layout="fill" style={{width:'300px',borderRadius:'10px'}}/>  
-          <h4>Unique Stays</h4>     
-     </div>
-     <div className=" flex item-center m-2 mt-5 space-x-4 
-">
-     <img src={img3} layout="fill" style={{width:'300px',borderRadius:'10px'}}/>  
-     <h4>Entire homes</h4>     
-</div>
- <div className=" flex item-center m-2 mt-5 space-x-4 
-">
- <img src={imgpet} layout="fill" style={{width:'300px',borderRadius:'10px'}}/>  
- <h4>Pet allowed</h4>     
-</div>
-</Col>
-</Row>
-     </Container>   
-               
-        );
+    const [reservation, setReservation] = useState({
+        name: '',
+        phone: '',
+        numberOfPeople: 1,
+        smoking: false,
+        dateTime: '',
+        specialRequests: '',
+    })
+
+    const handleInput = (propertyName, value) => {
+        // this.setState({
+        //     reservation: {
+        //         ...this.state.reservation,
+        //         [propertyName]: value
+        //     }
+        // })
+        setReservation({
+            ...reservation,
+            [propertyName]: value
+        })
     }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        // now how can we access the form input value?
+        console.log(reservation)
+        try {
+            let response = await fetch('https://striveschool-api.herokuapp.com/api/reservation', {
+                method: 'POST',
+                body: JSON.stringify(reservation),
+                headers: {
+                    'Content-type': 'application/json'
+                }
+            })
+            console.log(response)
+            if (response.ok) {
+                alert('Reservation successfully saved!')
+                // this.setState({
+                //     // this is the initial state of my form!
+                // reservation: {
+                //     name: '',
+                //     phone: '',
+                //     numberOfPeople: 1,
+                //     smoking: false,
+                //     dateTime: '',
+                //     specialRequests: '',
+                // }
+                // })
+                setReservation({
+                    name: '',
+                    phone: '',
+                    numberOfPeople: 1,
+                    smoking: false,
+                    dateTime: '',
+                    specialRequests: '',
+                })
+            } else {
+                alert('Something went wrong :(')
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const isFormComplete = () => {
+        return (
+            reservation.name.length > 0 &&
+            reservation.phone.length > 0 &&
+            reservation.dateTime.length > 0
+        )
+    }
+
+    return (
+        <>
+            <h2>BOOK YOUR TABLE HERE</h2>
+            <Form onSubmit={handleSubmit}>
+                <Form.Group>
+                    <Form.Label>Your name</Form.Label>
+                    <Form.Control
+                        // onChange={
+                        //     // this will happen every time I input a keystroke
+                        //     e => this.setState({
+                        //         reservation: {
+                        //             ...this.state.reservation,
+                        //             // with the ... your making a copy of all the properties
+                        //             // already existing into this.state.reservation
+                        //             name: e.target.value
+                        //             // and then you're just overwriting ONE property
+                        //         }
+                        //     })}
+                        onChange={e => handleInput('name', e.target.value)}
+                        value={reservation.name}
+                        type="text"
+                        placeholder="Enter your name here"
+                    />
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Your phone</Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="Enter your phone here"
+                        value={reservation.phone}
+                        onChange={e => handleInput('phone', e.target.value)}
+                    />
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>How many people?</Form.Label>
+                    <Form.Control
+                        as="select"
+                        value={reservation.numberOfPeople}
+                        onChange={e => handleInput('numberOfPeople', e.target.value)}
+                    >
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </Form.Control>
+                </Form.Group>
+                <Form.Group>
+                    <Form.Check
+                        checked={reservation.smoking}
+                        type="checkbox"
+                        onChange={e => handleInput('smoking', e.target.checked)}
+                        label="Do you smoke?"
+                    />
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Date and Time</Form.Label>
+                    <Form.Control
+                        value={reservation.dateTime}
+                        onChange={e => handleInput('dateTime', e.target.value)}
+                        type="datetime-local" />
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Any special request?</Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        rows={5}
+                        onChange={e => handleInput('specialRequests', e.target.value)}
+                        value={reservation.specialRequests}
+                        type="text"
+                        placeholder="Enter your special requests here" />
+                </Form.Group>
+                <Button disabled={!isFormComplete()} variant="primary" type="submit">
+                    Submit
+                </Button>
+            </Form>
+        </>
+    )
 }
 
-export default Main;
+export default ReservationForm
