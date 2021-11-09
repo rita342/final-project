@@ -1,4 +1,4 @@
-// import { Navbar, Nav } from 'react-bootstrap'
+
 import {Navbar,Nav,Button} from 'react-bootstrap'
 import { MdOutlineHouseSiding } from "react-icons/md";
 import { Link} from 'react-router-dom'
@@ -28,11 +28,4 @@ const MyNavbar = ({ brand, history, location, match }) => (
         </Navbar.Collapse>
     </Navbar>
 )
-
-// two ways for redirecting the user
-// 1) Using a <Link /> component
-// 2) Using history.push()
-
 export default withRouter(MyNavbar)
-// the result of withRouter(MyNavbar) is a HOC,
-// so our very own MyNavbar enriched with additional props (history, location and match)

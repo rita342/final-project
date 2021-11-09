@@ -17,8 +17,6 @@ flex-flow: column wrap;" >
  
   
     <Image src={card.img}rounded layout="fill" className="rounded-lg"style={{width:'100px',borderRadius:'20px'}}/>
-  
-         {/*Right*/}
          <div style={{float:'right', marginTop:'20px'}}>
         <h6 style={{fontsize:'15px'}}>{card.location}</h6>
         <h6 style={{fontsize:'15px'}}>{card.distance}</h6>
@@ -26,8 +24,7 @@ flex-flow: column wrap;" >
 </div> </Col>
             } 
 )
-
-    }
+ }
    
     </Row>
     </Container>

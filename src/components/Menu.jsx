@@ -13,23 +13,14 @@ const Menu = ({ history }) => {
                 <Row key={house.id} className="justify-content-start" style={{}}>
                     <Col>
                     <Card style={{width:'300px',marginTop:'30px'}}>
-    <Card.Img variant="top" src={house.img} style={{width:'300px'}}/>
-    
-    
- 
-   
+    <Card.Img variant="top" src={house.img} style={{width:'300px'}}/> 
   </Card>
-                         
-                       
-                       
                          </Col>
                          <Col>
                              <div className="">
                         <h4 style={{alignItems:'center',fontFamily:'Lucida Handwriting, Brush Script MT,cursive',color:'pink',marginTop:'30px'}}>
                             {house.location}
-                           
-                 
-                        </h4>
+                             </h4>
                         <p style={{color:'white',fontSize:'15px'}}> {house.description}</p>
                         <Link to={'/details/' + house.id}> <button style={{backgroundColor:'transparent',border:'0.5px solid grey',borderRadius:'10px',color:'white'}}>Learn More</button> </Link>
                       

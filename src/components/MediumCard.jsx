@@ -45,14 +45,9 @@ import {Col,Container,Row,Image} from 'react-bootstrap'
     <Col xs={12} md={12} lg={12}><Image src={img4} layout="fill" objectFit="cover"  style={{width:'100%',borderRadius:'10px',height:'400px',marginTop:'5rem',marginBottom:'5rem'}}/> 
     <h2 id=" big-card"style={{marginTop:'-40%'}}></h2>
      </Col>
-    
-  </Row>
-
-  
-
+    </Row>
 </Container>
-              
-        )
+)
 }
 
 export default MediumCard;
