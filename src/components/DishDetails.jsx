@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Card, Col, Container, Row } from 'react-bootstrap'
+import { Card, Col, Container, Row,Button ,Carousel} from 'react-bootstrap'
 import items from '../data/menu.json'
 import DatePicker from './DatePickerComponent'
 import { MdOutlineFacebook } from "react-icons/md";
@@ -21,9 +21,8 @@ const DishDetails = ({ match }) => {
     }, [])
 
     return (
-        <div className="DishDetails"style={{backgroundImage:`url("https://the.ismaili/sites/default/files/7._nature_is_awesome_1.jpg")`,repeat:'norepeat'}}>
-        <Container>
-            <Row className="justify-content-start">
+        <div className="DishDetails">
+      <Container> 
                 {
                     typeof pastaItem === 'undefined'
                         ? (
@@ -35,40 +34,37 @@ const DishDetails = ({ match }) => {
                             )
                             : (
                                 <>
-                                <Col md={8} className="text-center">
-                                <div className="card" style={{marginTop:'50px',borderRadius:'20px',background:'transparent',textAlign:'center',border:'1px solid grey',marginBottom:'200px'}}>
-                                
-                        <h2 style={{alignItems:'center',fontFamily:'Lucida Handwriting, Brush Script MT,cursive',color:'black',marginTop:'30px'}}>
-                            {pastaItem.location}
-                           
-                 
-                        </h2>
-
-                        <p style={{color:'pink',fontSize:'15px'}}>Number Of Rooms:{pastaItem.rooms}</p>
-                        <p style={{color:'black',fontSize:'20px',fontWeight:'500'}}>Number Of Rooms:{pastaItem.description}</p>
-                        <p style={{color:'white',fontSize:'15px'}}>Total Price: {pastaItem.price}$</p>
-                        <button style={{backgroundColor:'transparent',border:'0.5px solid black',borderRadius:'10px',color:'white',width:'150px',marginLeft:'20rem',marginBottom:'20px'}}>Add To your list</button>
-    </div>
-    </Col>
-<Col style={{marginTop:'70px',fontFamily:'Lucida Handwriting, Brush Script MT,cursive'}}>
+     <Container>
+ 
+    
+  <Row style={{marginTop:'8rem'}}>
+    <Col xs={12} md={12} lg={6} xl={6}><div className="" ><img src={pastaItem.img}  style={{width:'100%',height:'100%'}} /></div></Col>
+    <Col><Row>  <Col xs={12} md={12} lg={6} xl={6}>
+  <div clssName="">  <img src={pastaItem.img1}alt="display image" style={{width:'100%',height:'100%',marginBottom:'33px'}}/></div>
+  </Col></Row>  <Row><Col xs={12} md={12} lg={6} xl={6}>
+ <div className=""> <img src={pastaItem.img2}alt="display image" style={{width:'100%',height:'100%'}}/></div>
+    </Col></Row> </Col>
+  
+  </Row>
+</Container>
+  
 <h4>enter your date</h4>
 <div className="card">
     <DatePicker/></div>
 
-</Col>
- 
+
    
  
   </>
                                 
                             )
                 }
-            </Row>
+           
 
             <hr style={{background:'pink'}}/>
     <div class="container" style={{fontSize: '11px',color: 'grey',background:'black'}}>
 
-        <div class="row" style={{marginRight: '75px',color: 'pink',fontSize:'18px',fontWeight:'600'}}>
+        <div class="row" style={{marginRight: '75px',color: 'pink',fontSize:'16px',fontWeight:'600',marginTop:'30px'}}>
             <div class="col-12 col-md-3">ABOUT</div>
             <div class="col-12 col-md-3">COMMUNITY</div>
             <div class="col-12 col-md-3">HOST</div>

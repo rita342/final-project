@@ -2,20 +2,56 @@
 
 #tree{
     position:absolute;
-    top:35%;
-    left:10%;
+    top:25%;
+    left:30%;
+    color:white;
+    
+  }
+  #tree2{
+    position:absolute;
+    top:55%;
+    left:30%;
     color:white;
     font-family: Lucida Handwriting, Brush Script MT,cursive;
   }
-  
-  #big-card{
+  #tree3{
     position:absolute;
-    top:15%;
-    left:10%;
-    
+    top:33%;
+    left:30%;
+    color:black;
     
   }
+  #nav{
+    position:absolute;
   
+   width:800px;
+   height:50px;
+   border-radius: 9x;
+   box-shadow: 0 2px 3px rgb(0,0,0.1);
+   background: white;
+  }
+  
+  #nav li {
+      position: relative;
+    text-align: center;
+    display:inline-block;
+   width:170px;
+color:black
+  }
+  
+ 
+  
+  #search-bar{
+    position:absolute;
+    margin-top:-35%;
+    left:30%;
+    width:300px;
+    border-radius: 15px;
+  
+   
+  }
+  
+ 
  
   
 #house-img:before{
@@ -148,6 +184,8 @@ size:10px;
         padding: 0px 5px;
         transition: 0.01s;
     }
+   
+    
     
     nav.logo {
         color: white;

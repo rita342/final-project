@@ -4,34 +4,43 @@ import items from '../data/menu.json'
 import img2 from '../images/img2.jpg'
 import { MdOutlineFacebook } from "react-icons/md";
 import { BsTwitter  } from "react-icons/bs";
+import { useState} from 'react'
 
 const Menu = ({ history }) => {
+    const [searchTerm, setSearchTerm] = useState("")
     return(
-<div className="Menu"style={{backgroundImage:`url("https://latenitesunlite.files.wordpress.com/2014/10/wood-texture-rnhi1ed1.jpg")` ,padding:'30px'}}>
-    <Container id="container">
-        {
-            items.map(house => (
- 
-                <Row key={house.id} className="justify-content-start" style={{}}>
-                    <Col>
-                    <Card style={{width:'300px',marginTop:'30px'}}>
-    <Card.Img variant="top" src={house.img} style={{width:'300px'}}/> 
-  </Card>
-                         </Col>
-                         <Col>
-                             <div className="">
-                        <h4 style={{alignItems:'center',fontFamily:'Lucida Handwriting, Brush Script MT,cursive',color:'pink',marginTop:'30px'}}>
-                            {house.location}
-                             </h4>
-                        <p style={{color:'white',fontSize:'15px'}}> {house.description}</p>
-                        <Link to={'/details/' + house.id}> <button style={{backgroundColor:'transparent',border:'0.5px solid grey',borderRadius:'10px',color:'white'}}>Learn More</button> </Link>
-                      
-                        </div>
-                   </Col>
-                </Row>
-                
-            ))
+<Container style={{marginTop:'5rem'}}>
+                <Row   id="search-result" style={{flexWrap:'wrap',display:'flex'}}>           
+{items.filter((val)=>{
+        if(searchTerm ==""){
+                return val
+        }else if (val.country.toLowerCase().includes(searchTerm.toLowerCase())){
+                return val
         }
+}).map((val,key)=>{
+      
+        return(
+              
+        <Col xs={12} md={6} lg={6} xl={3} style={{marginTop:'20px'}}>
+        
+        
+           
+        <Link to={'/details/' + val.id}>   <Image src={val.img} layout="fill" style={{width:'100%',height:'200px',borderRadius:'20px'}}/></Link>
+            <div style={{float:'right', marginTop:'20px'}}>
+        <h6 style={{fontsize:'15px'}}>{val.country}</h6>
+        <h6 style={{fontsize:'15px'}}>{val.price}$</h6>
+      
+        </div>
+   
+ 
+                
+                 
+             </Col>
+              
+            )
+        
+})}  </Row>
+      
         <hr style={{background:'pink'}}/>
     <div class="container" style={{fontSize: '11px',color: 'grey',background:'transparent'}}>
 
@@ -105,7 +114,7 @@ const Menu = ({ history }) => {
         </div>  <h6>2021 Airbnb,Inc.</h6>
            <h6>Privacy .Terms .Sitemap</h6></div>
     </Container>
-    </div>
+   
     )
     }
 
