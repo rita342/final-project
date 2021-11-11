@@ -30,10 +30,9 @@ function App() {
           {/* Route is taking our component as a prop, and returning something new! */}
           {/* it's creating a HOC - Higher-order component */}
 
-          <Route path="/details/:pastaId" component={DishDetails} />
+          <Route path="/details/:houseId" component={DishDetails} />
           
 
-          <Route component={() => <h1>404</h1>} />
        
         </Switch>
        

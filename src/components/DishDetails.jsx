@@ -5,51 +5,48 @@ import DatePicker from './DatePickerComponent'
 import { MdOutlineFacebook } from "react-icons/md";
 import { BsTwitter  } from "react-icons/bs";
 
-const HouseDetails = ({ match }) => {
+const DishDetails = ({ match }) => {
 
-    const [pastaItem, setPastaItem] = useState(null)
+    const [houseItem, setHouseItem] = useState(null)
 
     useEffect(() => {
-        let retrievedIdFromURL = match.params.pastaId
+        let retrievedIdFromURL = match.params.houseId
 
        
-        let foundPasta = items.find(pasta => pasta.id.toString() === retrievedIdFromURL)
+        let foundHouse = items.find(house => house.id.toString() === retrievedIdFromURL)
         
-        console.log(foundPasta)
-        setPastaItem(foundPasta)
+        console.log(foundHouse)
+        setHouseItem(foundHouse)
       
     }, [])
 
     return (
-        <div className="HouseDetails">
+        <div className="DishDetails">
       <Container> 
                 {
-                    typeof pastaItem === 'undefined'
+                    typeof houseItem === 'undefined'
                         ? (
                             <h1>404 - Pasta Not Found</h1>
                         )
-                        : !pastaItem
+                        : !houseItem
                             ? (
                                 <p>LOADING...</p>
                             )
                             : (
                                 <>
      <Container>
- 
+ <div  style={{fontSize:'15px',fontWeight:'700'}}>{houseItem.name}</div>
+ <span style={{fontSize:'13px'}}>4.86(7 reviews)·Superho·Joncherey, Bourgogne Franche-Comté, France</span>
+<div class="grid-container" style={{marginTop:'1rem'}}>
+  <div class="item1" style={{width:'500px',height:'400px'}}> <img src={houseItem.img1}alt="display image" style={{width:'100%',height:'100%',marginBottom:'33px'}}/></div>
+  <div class="item2"style={{width:'270',height:'200'}}><img src={houseItem.img1}alt="display image" style={{width:'100%',height:'100%',marginBottom:'33px'}}/></div>
+  <div class="item3"style={{width:'270',height:'200'}}><img src={houseItem.img2}alt="display image" style={{width:'100%',height:'100%'}}/></div>  
+  <div class="item4"style={{width:'270',height:'200'}}> <img src={houseItem.img3}alt="display image" style={{width:'100%',height:'100%'}}/></div>
+  <div class="item5"style={{width:'270',height:'200'}}><img src={houseItem.img4}alt="display image" style={{width:'100%',height:'100%'}}/></div>
+   
+</div>
     
-  <Row style={{marginTop:'8rem'}}>
-    <Col xs={12} md={12} lg={6} xl={6}><div className="" ><img src={pastaItem.img}  style={{width:'100%',height:'100%'}} /></div></Col>
-    <Col><Row>  <Col xs={12} md={12} lg={6} xl={6}>
-  <div clssName="">  <img src={pastaItem.img1}alt="display image" style={{width:'100%',height:'100%',marginBottom:'33px'}}/></div>
-  </Col></Row>  <Row><Col xs={12} md={12} lg={6} xl={6}>
- <div className=""> <img src={pastaItem.img2}alt="display image" style={{width:'100%',height:'100%'}}/></div>
-    </Col></Row>  <Row><Col xs={12} md={12} lg={6} xl={6}>
- <div className=""> <img src={pastaItem.img3}alt="display image" style={{width:'100%',height:'100%'}}/></div>
-    </Col></Row> <Row><Col xs={12} md={12} lg={6} xl={6}>
- <div className=""> <img src={pastaItem.img4}alt="display image" style={{width:'100%',height:'100%'}}/></div>
-    </Col></Row></Col>
-  
-  </Row>
+ 
 </Container>
   
 <h4>enter your date</h4>
@@ -138,4 +135,4 @@ const HouseDetails = ({ match }) => {
     )
 }
 
-export default HouseDetails
+export default DishDetails
