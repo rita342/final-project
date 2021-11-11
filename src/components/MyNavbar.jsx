@@ -23,6 +23,7 @@ return(
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
+            <div style={{fontSize:'13px',color:'black',marginTop:'13px'}}>become a host</div>
                 <div className="nav-link" onClick={() => {
                     console.log('hello!')
                     history.push('/menu')

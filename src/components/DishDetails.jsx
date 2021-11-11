@@ -43,7 +43,11 @@ const DishDetails = ({ match }) => {
   <div clssName="">  <img src={pastaItem.img1}alt="display image" style={{width:'100%',height:'100%',marginBottom:'33px'}}/></div>
   </Col></Row>  <Row><Col xs={12} md={12} lg={6} xl={6}>
  <div className=""> <img src={pastaItem.img2}alt="display image" style={{width:'100%',height:'100%'}}/></div>
-    </Col></Row> </Col>
+    </Col></Row>  <Row><Col xs={12} md={12} lg={6} xl={6}>
+ <div className=""> <img src={pastaItem.img3}alt="display image" style={{width:'100%',height:'100%'}}/></div>
+    </Col></Row> <Row><Col xs={12} md={12} lg={6} xl={6}>
+ <div className=""> <img src={pastaItem.img4}alt="display image" style={{width:'100%',height:'100%'}}/></div>
+    </Col></Row></Col>
   
   </Row>
 </Container>
@@ -62,7 +66,7 @@ const DishDetails = ({ match }) => {
            
 
             <hr style={{background:'pink'}}/>
-    <div class="container" style={{fontSize: '11px',color: 'grey',background:'black'}}>
+    <div class="container" style={{fontSize: '11px',color: 'grey'}}>
 
         <div class="row" style={{marginRight: '75px',color: 'pink',fontSize:'16px',fontWeight:'600',marginTop:'30px'}}>
             <div class="col-12 col-md-3">ABOUT</div>
