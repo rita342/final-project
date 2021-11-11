@@ -5,11 +5,14 @@ import img2 from '../images/img2.jpg'
 import { MdOutlineFacebook } from "react-icons/md";
 import { BsTwitter  } from "react-icons/bs";
 import { useState} from 'react'
+import { AiFillHeart } from "react-icons/ai";
 
-const Menu = ({ history }) => {
+function Menu  ({ history }) {
     const [searchTerm, setSearchTerm] = useState("")
     return(
-<Container style={{marginTop:'5rem'}}>
+<><Container style={{marginTop:'3rem'}}>
+        <div ><input type="text" placeholder ="search... "onChange={(event)=>{setSearchTerm(event.target.value)}} style={{borderRadius:'10px'}}/></div>
+
                 <Row   id="search-result" style={{flexWrap:'wrap',display:'flex'}}>           
 {items.filter((val)=>{
         if(searchTerm ==""){
@@ -25,10 +28,10 @@ const Menu = ({ history }) => {
         
         
            
-        <Link to={'/details/' + val.id}>   <Image src={val.img} layout="fill" style={{width:'100%',height:'200px',borderRadius:'20px'}}/></Link>
+        <Link to={'/details/' + val.id}>   <Image src={val.img} layout="fill" style={{width:'100%',height:'200px',borderRadius:'20px',position:'relative'}}/><AiFillHeart style={{position:'absolute',marginTop:'10px',marginLeft:'-35px',color:'black',fontSize:'18px'}}/></Link>
             <div style={{float:'right', marginTop:'20px'}}>
-        <h6 style={{fontsize:'15px'}}>{val.country}</h6>
-        <h6 style={{fontsize:'15px'}}>{val.price}$</h6>
+        <p style={{fontSize:'12px'}}>{val.name}    price:  {val.price}$</p>
+        
       
         </div>
    
@@ -114,6 +117,7 @@ const Menu = ({ history }) => {
         </div>  <h6>2021 Airbnb,Inc.</h6>
            <h6>Privacy .Terms .Sitemap</h6></div>
     </Container>
+    </>
    
     )
     }

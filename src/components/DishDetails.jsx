@@ -5,7 +5,7 @@ import DatePicker from './DatePickerComponent'
 import { MdOutlineFacebook } from "react-icons/md";
 import { BsTwitter  } from "react-icons/bs";
 
-const DishDetails = ({ match }) => {
+const HouseDetails = ({ match }) => {
 
     const [pastaItem, setPastaItem] = useState(null)
 
@@ -14,14 +14,14 @@ const DishDetails = ({ match }) => {
 
        
         let foundPasta = items.find(pasta => pasta.id.toString() === retrievedIdFromURL)
-        // 1 !== '1'
+        
         console.log(foundPasta)
         setPastaItem(foundPasta)
       
     }, [])
 
     return (
-        <div className="DishDetails">
+        <div className="HouseDetails">
       <Container> 
                 {
                     typeof pastaItem === 'undefined'
@@ -55,13 +55,8 @@ const DishDetails = ({ match }) => {
 <h4>enter your date</h4>
 <div className="card">
     <DatePicker/></div>
-
-
-   
- 
   </>
-                                
-                            )
+                                                 )
                 }
            
 
@@ -143,4 +138,4 @@ const DishDetails = ({ match }) => {
     )
 }
 
-export default DishDetails
+export default HouseDetails
