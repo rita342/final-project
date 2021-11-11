@@ -1,0 +1,14 @@
+.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.rating *:not(:last-child) {
+  margin-right: 5px;
+}
+.rating-icon {
+  display: block;
+  height: 0.68rem;
+  width: 0.68rem;
+  fill: red;
+}

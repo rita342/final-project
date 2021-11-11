@@ -1,21 +1,38 @@
+.house-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.house-rating *:not(:last-child) {
+  margin-right: 5px;
+}
+
+.house-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.7rem;
+}
 .house-title {
   font-size: 0.93rem;
   font-weight: 700;
 }
 .house-address {
+  margin-left: 1.5rem;
   font-size: 0.81rem;
 }
-.house-image {
-  width: 270px;
-  height: 200px;
-}
+
 .house-image:first-of-type {
-  width: 500px;
-  height: 400px;
   grid-row: span 2;
+  width: 400px;
 }
 .house-image > img {
   width: 100%;
   height: 100%;
   margin-bottom: 33px;
+}
+.house-details-container {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
