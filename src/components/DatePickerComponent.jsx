@@ -12,6 +12,10 @@ class DatePickerComponent extends Component {
     };
   }
 
+  changeHandler({ startDate, endDate }) {
+    this.setState({ startDate, endDate });
+    this.props.onChange({ startDate, endDate });
+  }
   render() {
     return (
       <div>
@@ -20,9 +24,7 @@ class DatePickerComponent extends Component {
           startDateId="your_unique_start_date_id"
           endDate={this.state.endDate}
           endDateId="your_unique_end_date_id"
-          onDatesChange={({ startDate, endDate }) =>
-            this.setState({ startDate, endDate })
-          }
+          onDatesChange={this.changeHandler.bind(this)}
           focusedInput={this.state.focusedInput}
           onFocusChange={(focusedInput) => this.setState({ focusedInput })}
         />

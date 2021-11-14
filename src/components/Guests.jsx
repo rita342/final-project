@@ -1,19 +1,27 @@
-import { Button, Dropdown } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import { useState } from "react";
-import { FcPlus } from "react-icons/fc";
-import { BsPeopleFill, BsPatchMinusFill, BsPlusCircle } from "react-icons/bs";
+import { BsPlusCircle } from "react-icons/bs";
 import { AiOutlineMinusCircle } from "react-icons/ai";
 
-function Guests() {
-  const [countInfant, setCountInfant] = useState(0);
-  const [countChildren, setCountChildren] = useState(0);
-  const [countAdult, setCountAdult] = useState(0);
-
+function Guests(props) {
+  const [guestsCount, setGuestCount] = useState({
+    infant: 0,
+    children: 0,
+    adult: 0,
+  });
+  function guestCountChangeHandler(guestType, num) {
+    const newGuestsCount = {
+      ...guestsCount,
+      [guestType]: guestsCount[guestType] + num,
+    };
+    setGuestCount(newGuestsCount);
+    props.onChange(newGuestsCount);
+  }
   return (
     <>
       <Dropdown>
         <Dropdown.Toggle
-          id="dropdown-basic"
+          className="dropdown-basic"
           style={{
             background: "white",
             border: "1px solid #bdbdbd",
@@ -25,9 +33,18 @@ function Guests() {
         >
           <div style={{ float: "left" }}>
             <div style={{ fontSize: "14px" }}>GUESTS</div>
-            <span style={{ fontSize: "13px" }}> {countAdult}infants</span>{" "}
-            <span style={{ fontSize: "13px" }}> {countChildren}Children </span>
-            <span style={{ fontSize: "13px" }}> {countInfant}Adults</span>
+            <span style={{ fontSize: "13px" }}>
+              {" "}
+              {guestsCount.infant} Infants
+            </span>{" "}
+            <span style={{ fontSize: "13px" }}>
+              {" "}
+              {guestsCount.children} Children{" "}
+            </span>
+            <span style={{ fontSize: "13px" }}>
+              {" "}
+              {guestsCount.adult} Adults
+            </span>
           </div>
         </Dropdown.Toggle>
 
@@ -43,47 +60,37 @@ function Guests() {
           <div style={{ float: "right", padding: "10px" }}>
             <li>
               <AiOutlineMinusCircle
-                onClick={() => setCountInfant(countInfant - 1)}
+                onClick={() => guestCountChangeHandler("infant", -1)}
               />{" "}
-              {countInfant}{" "}
-              <BsPlusCircle onClick={() => setCountInfant(countInfant + 1)} />
-            </li>
-            <br />
-            <li>
-              <AiOutlineMinusCircle
-                onClick={() => setCountChildren(countChildren - 1)}
-              />{" "}
-              {countChildren}{" "}
+              {guestsCount.infant}{" "}
               <BsPlusCircle
-                onClick={() => setCountChildren(countChildren + 1)}
+                onClick={() => guestCountChangeHandler("infant", 1)}
               />
             </li>
             <br />
             <li>
               <AiOutlineMinusCircle
-                onClick={() => setCountAdult(countAdult - 1)}
+                onClick={() => guestCountChangeHandler("children", -1)}
               />{" "}
-              {countAdult}{" "}
-              <BsPlusCircle onClick={() => setCountAdult(countAdult + 1)} />
+              {guestsCount.children}{" "}
+              <BsPlusCircle
+                onClick={() => guestCountChangeHandler("children", 1)}
+              />
+            </li>
+            <br />
+            <li>
+              <AiOutlineMinusCircle
+                onClick={() => guestCountChangeHandler("adult", -1)}
+              />{" "}
+              {guestsCount.adult}{" "}
+              <BsPlusCircle
+                onClick={() => guestCountChangeHandler("adult", 1)}
+              />
             </li>
             <br />
           </div>
         </Dropdown.Menu>
       </Dropdown>
-
-      <button
-        style={{
-          marginTop: "2rem",
-          width: "285px",
-          height: "3rem",
-          color: "white",
-          background: "#E6007E",
-          border: "1px solid #bdbdbd",
-          borderRadius: "10px",
-        }}
-      >
-        Reserve
-      </button>
     </>
   );
 }

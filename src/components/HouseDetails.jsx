@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { Card, Col, Container, Row, Button, Carousel } from "react-bootstrap";
+import { useContext, useEffect, useState } from "react";
 import items from "../data/menu.json";
 import DatePicker from "./DatePickerComponent";
+import Modal from "./Modal";
 
 import Rating from "./Rating";
 import Reserve from "./Reserve";
@@ -10,11 +10,27 @@ import styles from "./HouseDetails.module.css";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsKey } from "react-icons/bs";
 import { MdDateRange } from "react-icons/md";
-import Guests from "./Guests";
-import Description from "./Description";
+import { FavoriteContext } from "../store/Favorite";
 const HouseDetails = ({ match }) => {
-  const [houseItem, setHouseItem] = useState(null);
+  const context = useContext(FavoriteContext);
 
+  const [houseItem, setHouseItem] = useState(null);
+  const [reservatonData, setReservationData] = useState(null);
+  function reservationHandler(reservation) {
+    setReservationData(reservation);
+  }
+  function confirmHandler() {
+    setReservationData(null);
+  }
+  function cancelHandler() {
+    setReservationData(null);
+  }
+  function saveFavoriteHandler() {
+    context.addFavorite(houseItem);
+  }
+  function removeFavoriteHandler() {
+    context.removeFavorite(houseItem);
+  }
   useEffect(() => {
     let retrievedIdFromURL = match.params.houseId;
 
@@ -28,18 +44,40 @@ const HouseDetails = ({ match }) => {
 
   return (
     <div className="flex-center">
+      {reservatonData && (
+        <Modal
+          title="Are you sure you want to make a reservation?"
+          onConfirm={confirmHandler}
+          onCancel={cancelHandler}
+        >
+          <ul>
+            <li>Number of adult guests: {reservatonData.guests.adult}</li>
+            <li>Number of child guests: {reservatonData.guests.children}</li>
+            <li>Number of infant guests: {reservatonData.guests.infant}</li>
+          </ul>
+        </Modal>
+      )}
       {!houseItem ? (
         <p>LOADING...</p>
       ) : (
         <div className="screen">
           <div>
             <h2 className={styles["house-title"]}>{houseItem.name}</h2>
-            {houseItem.country}
-            <div className={styles["house-info"]}>
-              <Rating />
-              <span className={styles["house-address"]}>
-                Superho·Joncherey, Bourgogne Franche-Comté, France
-              </span>
+            <div className={styles["house-actions-container"]}>
+              <div className={styles["house-info"]}>
+                <Rating />
+                <span className={styles["house-address"]}>
+                  Superho·Joncherey, Bourgogne Franche-Comté,{" "}
+                  {houseItem.country}
+                </span>
+              </div>
+              <div className={styles["house-actions"]}>
+                {context.isFavorite(houseItem) ? (
+                  <button onClick={removeFavoriteHandler}>Remove</button>
+                ) : (
+                  <button onClick={saveFavoriteHandler}>Save</button>
+                )}
+              </div>
             </div>
           </div>
           <div className="grid-container" style={{ marginTop: "1rem" }}>
@@ -82,7 +120,7 @@ const HouseDetails = ({ match }) => {
             </div>
 
             <div>
-              <Reserve />
+              <Reserve itemDetails={houseItem} onReserve={reservationHandler} />
             </div>
           </div>
         </div>

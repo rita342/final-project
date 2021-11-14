@@ -2,11 +2,7 @@ import { Col, Container, Row, Image, Nav } from "react-bootstrap";
 import React, { Component } from "react";
 import CardComponent from "./CardComponent";
 import MediumCard from "./MediumCard";
-import { useState } from "react";
-import items from "../data/menu.json";
-import { Link } from "react-router-dom";
-import { BiGlobe, BiSearch } from "react-icons/bi";
-import FooterHome from "./FooterHome"
+
 const Home = ({ history }) => {
   return (
     <>
@@ -19,7 +15,6 @@ const Home = ({ history }) => {
             style={{
               backgroundRepeat: "no-repeat",
               width: "100%",
-
               position: "relative",
             }}
           />
@@ -33,14 +28,11 @@ const Home = ({ history }) => {
               history.push("/menu");
             }}
             className="flexible-btn"
-           
-         
           >
             I,m flexible
           </button>
         </div>
       </div>
-
 
       <div>
         <CardComponent />
@@ -48,9 +40,7 @@ const Home = ({ history }) => {
       <div>
         <MediumCard />
       </div>
-       <div>
-       
-      </div>
+      <div></div>
     </>
   );
 };

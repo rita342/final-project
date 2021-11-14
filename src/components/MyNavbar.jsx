@@ -3,7 +3,7 @@ import { MdOutlineHouseSiding } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import { FaAirbnb } from "react-icons/fa";
-import { BiGlobe, BiSearch } from "react-icons/bi";
+import { BiGlobe } from "react-icons/bi";
 import { FaUserCircle } from "react-icons/fa";
 import { useState } from "react";
 
@@ -50,17 +50,11 @@ function MyNavbar({ brand, history, location, match }) {
                   style={{ fontSize: "20px", color: "black" }}
                 />
               </div>
-              <Link to="/reservations">
-                <div
-                  className={
-                    location.pathname === "/reservations"
-                      ? "nav-link active"
-                      : "nav-link"
-                  }
-                >
-                  <BiGlobe style={{ fontSize: "20px", color: "black" }} />
-                </div>
+
+              <Link to="/favorite">
+                <BiGlobe style={{ fontSize: "20px", color: "black" }} />
               </Link>
+
               <Nav.Link>
                 <FaUserCircle style={{ fontSize: "20px", color: "black" }} />
               </Nav.Link>

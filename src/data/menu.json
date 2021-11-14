@@ -15,7 +15,7 @@
     "description": "My place is close to nature and walks in the forest.",
     "name": "Lov'nid COMET SPA Cabin for 2 pax",
     "numberOfRoom": "2guests.1bedroom.1bed .1bath",
-    "price": "600"
+    "price": 600
   },
   {
     "id": 2,
@@ -33,7 +33,7 @@
     "description": "sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis",
     "numberOfRoom": "2guests.1bedroom.1bed  2d.1bath",
     "name": "Cuibul Vulturilor",
-    "price": "300"
+    "price": 300
   },
   {
     "id": 3,
@@ -51,7 +51,7 @@
     "description": "Treehouse - Ostružno/Jičín Beautiful house in the treetops in a protected area and bird sanctuary Ostružno, offers a traditional experience for lovers of adventure. Treehouse is up to 4 guests. Ideal for family relaxation or romance for two. There are two swimming pools on the campsite grounds and they are shared",
     "numberOfRoom": "3guests.2bedroom.1b2d.1bath",
     "name": "Treehouse - Český ráj",
-    "price": "300"
+    "price": 300
   },
   {
     "id": 4,
@@ -69,7 +69,7 @@
     "description": "a small cozy tree house, insulated and equipped with wood-burning stove. The bed is 1.20m wide. Our compost room is outside. Cooking on the oven or gas stove on the balcony possible. Basic cooking utensils available. The air lock is located on a beautiful forest plot with drinking water source. There is also a natural swimming pond on site. With us lives a cat and we have horses as neighbors;) Wood for heating and campfire included. Hiking map& tips incl.",
     "numberOfRoom": 4,
     "name": "Baumhaus- Luftschloss/treehouse",
-    "price": "200"
+    "price": 200
   },
   {
     "id": 5,
@@ -87,7 +87,7 @@
     "description": "The Treehouse is a perfect place for a vacation in the middle of the old pine trees forest. It offers a retreat from an intensive city life and a short getaway to the wild less than one hour away from Vilnius.The space The place itself is a romantic room suited for an unforgettable moments with a loved one.",
     "numberOfRoom": 2,
     "name": "Varena Treehouse West",
-    "price": "300"
+    "price": 300
   },
   {
     "id": 6,
@@ -105,7 +105,7 @@
     "description": "A beautiful treehouse, in the middle of nature. It overlooks a small pond which is full of fish and there's also a nearby river which you can hear from the porch, that adds to the beautiful nature scene.  ",
     "numberOfRoom": 2,
     "name": "Cuibul Vulturilor",
-    "price": "400"
+    "price": 400
   },
   {
     "id": 7,
@@ -123,7 +123,7 @@
     "name": "Treehouse Česká Kanada",
     "description": "Visit our Treehouse, located in Czech Canada and a short walk from the Austrian border and you will certainly not regret it. Escape the hustle and bustle of the city into the beautiful countryside of Czech Canada and wake up to the sounds of forest animals and bubbling brook. Light candles in the evening and enjoy a quiet and undisturbed stay on the terrace in the treetops.",
     "numberOfRoom": 7,
-    "price": "300"
+    "price": 300
   },
   {
     "id": 8,
@@ -140,7 +140,7 @@
     "country": "Slovenia",
     "description": "in consequat ut nulla sed accumsan felis ut at dolor quis",
     "numberOfRoom": 2,
-    "price": "500"
+    "price": 500
   },
   {
     "id": 9,
@@ -158,7 +158,7 @@
     "name": "Tree house 8 m from the ground",
     "description": "The tree house is unique 8 m from the ground experience for special people, who would like to merge with amazing nature for a night. Insects, birds and squirrels will be waiting for your visit in their neighborhood. All starts that you can count in the sky - hotel, with less comfort, more adventure. Extreme conditions - no heating, no hot water, just peace and nature for extreme experience!",
     "numberOfRoom": 3,
-    "price": "400"
+    "price": 400
   },
   {
     "id": 10,
@@ -176,7 +176,7 @@
     "description": "My place is close to nature and in the forest. You'll love my place because of its originality and comfort.My place is great for couples.",
     "numberOfRoom": 4,
     "name": "Cabane Vertige pour 2 personnes",
-    "price": "300"
+    "price": 300
   },
   {
     "id": 11,
@@ -194,7 +194,7 @@
     "description": "The house is a wooden building at an altitude of 9 meters above the ground. It is situated on the edge of a mixed forest overlooking the forest and fields. Reasonably large room, bedroom for 3 people, with small bathroom, outdoors with 3 terraces equipped with furniture. Opening a large double door offers a magnificent view of the countryside from the double bed.",
     "numberOfRoom": 4,
     "name": "Tree House Tři Duby, Resort Green Valley",
-    "price": "500"
+    "price": 500
   },
   {
     "id": 12,
@@ -212,7 +212,7 @@
     "description": "A unique house in trees on the edge of the urban nature reserve .We offer two terraces (including one large covered), a summer cinema and a summer outdoor shower.",
     "numberOfRoom": 4,
     "name": "Lost Garden _ dom w drzewach na skraju rezerwatu",
-    "price": "400"
+    "price": 400
   },
   {
     "id": 13,
@@ -230,7 +230,7 @@
     "description": "A gorgeous Tree House for an exquisite experience perfect for an individual or couple looking for a night or more away. Surrounded by towering trees and set back in a 3 acre village retreat, you truly experience a unique stay. Minutes from historic churches and village museums, this is truly a place you can’t miss on.",
     "numberOfRoom": 3,
     "name": "Transylvania Loft Treehouse - Wifi - Self CheckIn-",
-    "price": "500"
+    "price": 500
   },
   {
     "id": 14,
@@ -248,7 +248,7 @@
     "description": "Then you now have the unique chance to experience this adventure with us and fulfill your childhood dream.You can watch the horses graze and enjoy the countryside on the terrace in the evening at an airy height.",
     "numberOfRoom": 14,
     "name": "Baumhaus Hof Grove-Dittmer",
-    "price": "45-806-1931"
+    "price": 45
   },
   {
     "id": 15,
@@ -266,7 +266,7 @@
     "description": "Rental for a minimum of 2 people. In the cottage you should walk in slippers. From the cottage to the toilet, you walk down the stairs through the backyard. The water in the bathroom is heated by the boiler, which should be turned on on arrival, the bathroom has hand soap, towels, toilet paper. In the cottage there is a small stove, fridge, kettle, heating stove. Under the cottage there is a small kitchen area with a sink, pots, pans, cutlery, glasses, mugs, etc. ",
     "numberOfRoom": 4,
     "name": "Domek na drzewie wśród zwierząt",
-    "price": "600"
+    "price": 600
   },
 
   {
@@ -285,7 +285,7 @@
     "description": "Unique wooden tree house with a private terrace, located just above the river. Serene rural area. You will be waking up to a sound of river and fresh air.",
     "name": "Wooden tree house",
     "numberOfRoom": 3,
-    "price": "230"
+    "price": 230
   },
 
   {
@@ -304,7 +304,7 @@
     "description": "Our litlle treehoese is very comfortable and sweet for a cuple in love. It includes bathroom and free parking. The place is quiet and peaceful.  Guest accessNearest house to the forest, walking and off road bike tracks.",
     "numberOfRoom": 3,
     "name": "Charming little treehouse",
-    "price": "400"
+    "price": 400
   },
   {
     "id": 21,
@@ -322,7 +322,7 @@
     "description": "Our treehouse is set in a green garden with play and parking. From the terrace at a height of 2.20 meters you have a great view of the greenery of the area. You can enjoy breakfast or end the evening. ",
     "numberOfRoom": 3,
     "name": "Baumhaus: Natur & Stadt",
-    "price": "400"
+    "price": 400
   },
   {
     "id": 22,
@@ -340,7 +340,7 @@
     "description": "You can experience the thrill of sleeping 5 meters high, among the leaves of the great linden tree. The suite is built of wood, and furnished with natural materials, in line with the philosophy that distinguishes all rooms of the structure. At your disposal you will find a king size bed, an area with shower and bathtub and a separate living area. The roof, with exclusive access to suite guests, is an extraordinary observatory overlooking the river landscape.",
     "numberOfRoom": 2,
     "name": "La casa sull'albero di Borgostazione",
-    "price": "300"
+    "price": 300
   },
   {
     "id": 23,
@@ -358,7 +358,7 @@
     "description": "Get away from reality, live in a treehouse.Lapkino's nest is a place created for privacy. The houses rest directly on the half-century-old birch trees and in windy weather you can feel them moving along with the trees. You will become part of a dense forest and experience a feeling of deep solitude with nature. A personal SPA POOL with hydromassage is at your disposal.",
     "numberOfRoom": 3,
     "name": "Папин Дом на дереве - Лапочкино гнездо",
-    "price": "300"
+    "price": 300
   },
   {
     "id": 24,
@@ -376,7 +376,7 @@
     "description": "Escape to one of these two fabulous Tree Tents. Suspended high above the canopy, it’s time to appreciate life from a new perspective. Featured on George Clarke’s Amazing Spaces, these Tree Tents are a feat of aviation technology. Tree Tent comes complete with fire pit, outdoor kitchen and shower with hot water. You’ll discover a comfortable bed and cosy wood burning stove. Part of the Red Kite Estate, along with our barn and its sister tree tent, the first ever built in the UK, Dragon's Egg.",
     "numberOfRoom": 2,
     "name": "Red Kite Tree Tent - Ynys Affalon",
-    "price": "200"
+    "price": 200
   },
   {
     "id": 25,
@@ -395,7 +395,7 @@
     "description": "luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit",
     "numberOfRoom": 5,
     "name": "Red Kite Tree Tent - Ynys Affalon",
-    "price": "500"
+    "price": 500
   },
   {
     "id": 26,
@@ -413,7 +413,7 @@
     "description": "Delightfully pretty and sweet tree-house with private swimming pool and relaxing views, enjoying a great location just 15 min walk away from the lively Roda with sandy beach, bars and restaurants. This is the only eco-friendly house for rent in Corfu and is able to offer a truly memorable holiday experience with the added bonus of superb extras such as private pool, wide gardens, air-conditioning, barbecue, free bicycles and free sunbeds/umbrellas on Roda Beach. See below for more details.",
     "numberOfRoom": 2,
     "name": "EcoFriendly Elmar Tree House  with private pool",
-    "price": "200"
+    "price": 200
   },
   {
     "id": 27,
@@ -431,7 +431,7 @@
     "description": "A fascinating and idyllic place for an enchanting experience.The Casanghjulina hut is a new stage in this magnificent project that is ours.  A luxurious suite, perched with a beautiful terrace , shower room, toilet, TV, internet access.... nestled in the Corsican scrubland.",
     "numberOfRoom": 3,
     "name": "Casanghjulina - La Cabane",
-    "price": "400"
+    "price": 400
   },
   {
     "id": 28,
@@ -449,7 +449,7 @@
     "description": "☼ BEAUTIFUL NATURE AND SURROUNDINGS ☼ ☼ MOUNTAIN VIEWS☼☼ MAGICAL GARDEN☼ ☼ JACUZZI AND SAUNA ☼",
     "numberOfRoom": 3,
     "name": "Tree House and Sauna with Beautiful Mountain Views",
-    "price": "500"
+    "price": 500
   },
   {
     "id": 29,
@@ -467,7 +467,7 @@
     "description": "Relax and unwind in our LEGO-BOX with unique views over Ippesheim.The box was built sustainably and ecologically and thus has a pleasant indoor climate.You live in the middle of the treetops and can enjoy the sunrise and the fantastic sunset on the balcony. ",
     "numberOfRoom": 4,
     "name": "Exclusives wohnen in der LEGO- BOX",
-    "price": "66-383-6522"
+    "price": 66
   },
   {
     "id": 30,
@@ -485,7 +485,7 @@
     "description": "The magnificent treehouse can accommodate up to 5 people. At Hunza, this includes a nice living space, terrace, kitchenette, shower and dry toilet.Hunza Ecolodge is a place for ecotourism which offers glamping, a treehouse and mini camping, or can be rented out as group accommodation, in Southern Hungary. ",
     "numberOfRoom": 3,
     "name": "Fairytale Treehouse in Southern Hungary",
-    "price": "400"
+    "price": 400
   },
   {
     "id": 31,
@@ -503,7 +503,7 @@
     "description": "Aerial glamping is perfect place to crash the night or stay longer in wildish, beautiful Rakitna.It is placed just next to the Rakitna lake and makes it a great starting point to go cycling or hiking. You will be woken up by birds singing and sunshine. There is just 30 min to the center of Ljubljana.",
     "numberOfRoom": 31,
     "name": "Fairytale Treehouse in Southern Hungary",
-    "price": "420"
+    "price": 420
   },
 
   {
@@ -520,7 +520,7 @@
     "country": "Moldova",
     "description": "vel enim sit amet nunc viverra dapibus nulla suscipit ligula",
     "numberOfRoom": 4,
-    "price": "400"
+    "price": 400
   },
   {
     "id": 95,
@@ -535,7 +535,7 @@
     "country": "Cyprus",
     "description": "integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui",
     "numberOfRoom": 5,
-    "price": "500"
+    "price": 500
   },
 
   {
@@ -551,7 +551,7 @@
     "country": "United States",
     "description": "amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt",
     "numberOfRoom": 3,
-    "price": "300"
+    "price": 300
   },
   {
     "id": 98,
@@ -567,7 +567,7 @@
     "description": "id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit",
     "numberOfRoom": 2,
 
-    "price": "350"
+    "price": 350
   },
 
   {
@@ -586,7 +586,7 @@
     "description": "Our litlle treehoese is very comfortable and sweet for a cuple in love. It includes bathroom and free parking. The place is quiet and peaceful.  Guest accessNearest house to the forest, walking and off road bike tracks.",
     "numberOfRoom": 3,
     "name": "Charming little treehouse",
-    "price": "400"
+    "price": 400
   },
   {
     "id": 21,
@@ -604,7 +604,7 @@
     "description": "Our treehouse is set in a green garden with play and parking. From the terrace at a height of 2.20 meters you have a great view of the greenery of the area. You can enjoy breakfast or end the evening. ",
     "numberOfRoom": 3,
     "name": "Baumhaus: Natur & Stadt",
-    "price": "400"
+    "price": 400
   },
   {
     "id": 22,
@@ -622,7 +622,7 @@
     "description": "You can experience the thrill of sleeping 5 meters high, among the leaves of the great linden tree. The suite is built of wood, and furnished with natural materials, in line with the philosophy that distinguishes all rooms of the structure. At your disposal you will find a king size bed, an area with shower and bathtub and a separate living area. The roof, with exclusive access to suite guests, is an extraordinary observatory overlooking the river landscape.",
     "numberOfRoom": 2,
     "name": "La casa sull'albero di Borgostazione",
-    "price": "300"
+    "price": 300
   },
   {
     "id": 23,
@@ -640,6 +640,6 @@
     "description": "Get away from reality, live in a treehouse.Lapkino's nest is a place created for privacy. The houses rest directly on the half-century-old birch trees and in windy weather you can feel them moving along with the trees. You will become part of a dense forest and experience a feeling of deep solitude with nature. A personal SPA POOL with hydromassage is at your disposal.",
     "numberOfRoom": 3,
     "name": "Папин Дом на дереве - Лапочкино гнездо",
-    "price": "300"
+    "price": 300
   }
 ]
