@@ -1,0 +1,43 @@
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  padding: 2rem 3rem;
+  border-radius: 0.6rem;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button {
+  padding: 1rem 3rem;
+  border-radius: 0.6rem;
+}
+.button-primary {
+  color: white;
+  background: #e6007e;
+  border: 1px solid #bdbdbd;
+}
+
+.button-secondary {
+  color: #e6007e;
+  background: white;
+  border: 1px solid #e6007e;
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.actions :not(:last-child) {
+  margin-right: 1rem;
+}

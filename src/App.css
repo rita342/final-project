@@ -361,3 +361,22 @@ nav.user-button {
     display: none;
   }
 }
+
+.reserve-btn{
+ 
+    margin-top: 2rem;
+    width: 285px;
+    height: 3rem;
+    color: white;
+    background: #E6007E;
+    border: 1px solid #bdbdbd;
+    border-radius: 10px;
+}
+.dropdown-basic {
+  background: white;
+    border: 1px solid #bdbdbd;
+    width: 285px;
+   margin-top: -10px;
+   
+  
+}
