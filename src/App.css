@@ -1,32 +1,53 @@
-#tree {
+.tree-quote {
   position: absolute;
   top: 25%;
   left: 30%;
   color: white;
-}
-#tree2 {
-  position: absolute;
-  top: 55%;
-  left: 30%;
-  color: white;
   font-family: Lucida Handwriting, Brush Script MT, cursive;
-}
-#tree3 {
-  position: absolute;
-  top: 33%;
-  left: 30%;
-  color: black;
-}
-#nav {
-  position: absolute;
-
-  width: 800px;
-  height: 50px;
-  border-radius: 9x;
-  box-shadow: 0 2px 3px rgb(0, 0, 0.1);
-  background: white;
+  font-weight: 700;
+  font-size:25px  
 }
 
+  .cover{
+    position: relative;
+  }
+
+
+@media screen and (max-width: 600px) {
+  .tree-quote {
+    display: none;
+  }
+}
+
+.flexible-btn {
+position:absolute;
+  color:purple;
+  background-color: white;
+  width: 7rem;
+display: flex;
+ left: 40%;
+border:1px solid grey;
+  top: 55%;
+  border-radius: 20px;
+  font-size:1rem;
+ 
+  font-weight: 700;
+  
+}
+
+
+.rounded-lg{
+width:100px;
+border-radius:20px
+}
+
+.location-distance{
+  float:right;
+   margin-top:20px;
+}
+.card-medium{
+background-color:red;
+}
 #nav li {
   position: relative;
   text-align: center;

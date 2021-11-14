@@ -9,7 +9,7 @@ export default function Footer() {
         <div
           className="row"
           style={{
-            marginRight: "75px",
+            marginRight: "95px",
             color: "pink",
             fontSize: "16px",
             fontWeight: "600",
