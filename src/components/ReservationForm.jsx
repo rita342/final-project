@@ -2,25 +2,7 @@ import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-// name -> string
-// phone -> string | number
-// numberOfPeople -> string | number
-// smoking -> boolean
-// dateTime -> string
-// specialRequests -> string
-
 const ReservationForm = () => {
-  // state = {
-  //     reservation: {
-  //         name: '',
-  //         phone: '',
-  //         numberOfPeople: 1,
-  //         smoking: false,
-  //         dateTime: '',
-  //         specialRequests: '',
-  //     }
-  // }
-
   const [reservation, setReservation] = useState({
     name: "",
     phone: "",
@@ -63,11 +45,10 @@ const ReservationForm = () => {
         alert("Reservation successfully saved!");
         setReservation({
           name: "",
-          phone: "",
+
           numberOfPeople: 1,
-          smoking: false,
+
           dateTime: "",
-          specialRequests: "",
         });
       } else {
         alert("Something went wrong :(");
@@ -78,11 +59,7 @@ const ReservationForm = () => {
   };
 
   const isFormComplete = () => {
-    return (
-      reservation.name.length > 0 &&
-      reservation.phone.length > 0 &&
-      reservation.dateTime.length > 0
-    );
+    return reservation.name.length > 0 && reservation.dateTime.length > 0;
   };
 
   return (

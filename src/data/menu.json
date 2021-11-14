@@ -3,25 +3,25 @@
     "id": 1,
     "latitude": 50.7643672,
     "longitude": 21.6390801,
-    "img": "https://a0.muscache.com/im/pictures/fa32c49e-83c9-42ae-8dd7-ebc4e98f17c8.jpg?im_w=1200",
+    "img": "https://a0.muscache.com/im/pictures/35c6df10-f6dd-4650-8dea-a272014c799f.jpg?im_w=1200",
     "imgs": [
-      "https://a0.muscache.com/im/pictures/37366830/8c31e816_original.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/35c6df10-f6dd-4650-8dea-a272014c799f.jpg?im_w=1200",
       "https://a0.muscache.com/im/pictures/0bfd21b5-b135-4d2c-ab9e-38001cfbae10.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/4f8a955a-e6a3-4a3f-956c-55ff615af49d.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/d0ae633b-98c9-4c83-a263-fc9c02d25d76.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/a7027472-5947-46bb-a394-9f32759d7302.jpg?im_w=720"
     ],
     "country": "Poland",
-    "description": "My place is close to nature and walks in the forest. You'll love my place for its originality and private Nordic bath. My place is perfect for couples.",
+    "description": "My place is close to nature and walks in the forest.",
     "name": "Lov'nid COMET SPA Cabin for 2 pax",
-    "numberOfRoom": 1,
+    "numberOfRoom": "2guests.1bedroom.1bed .1bath",
     "price": "600"
   },
   {
     "id": 2,
     "latitude": 30.169665,
     "longitude": 121.266579,
-    "img": "https://a0.muscache.com/im/pictures/15d79cba-d6be-4c2e-8e8f-87ed78b27e78.jpg?im_w=1200",
+    "img": "https://a0.muscache.com/im/pictures/37366830/8c31e816_original.jpg?im_w=720",
     "imgs": [
       "https://a0.muscache.com/im/pictures/37366830/8c31e816_original.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/0a7b4c4f-2073-47ac-a035-1ab344da3fd5.jpg?im_w=720",
@@ -31,7 +31,8 @@
     ],
     "country": "China",
     "description": "sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis",
-    "numberOfRoom": 2,
+    "numberOfRoom": "2guests.1bedroom.1bed  2d.1bath",
+    "name": "Cuibul Vulturilor",
     "price": "300"
   },
   {
@@ -40,7 +41,7 @@
     "longitude": 30.9136062,
     "img": "https://a0.muscache.com/im/pictures/d7e9b8b7-cad9-4351-b60a-a0e946538317.jpg?im_w=1200",
     "imgs": [
-      "https://a0.muscache.com/im/pictures/37366830/8c31e816_original.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/d7e9b8b7-cad9-4351-b60a-a0e946538317.jpg?im_w=1200",
       "https://a0.muscache.com/im/pictures/997df07e-10cf-41d4-8860-9b0027293e9e.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/7469ab7a-0ec8-4e3e-a032-022e5a3dd8bd.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/335da17e-d7fc-46fc-8720-83f8b25f675c.jpg?im_w=720",
@@ -48,7 +49,7 @@
     ],
     "country": "South Africa",
     "description": "Treehouse - Ostružno/Jičín Beautiful house in the treetops in a protected area and bird sanctuary Ostružno, offers a traditional experience for lovers of adventure. Treehouse is up to 4 guests. Ideal for family relaxation or romance for two. There are two swimming pools on the campsite grounds and they are shared",
-    "numberOfRoom": 3,
+    "numberOfRoom": "3guests.2bedroom.1b2d.1bath",
     "name": "Treehouse - Český ráj",
     "price": "300"
   },
@@ -76,7 +77,7 @@
     "longitude": 121.085794,
     "img": "https://a0.muscache.com/im/pictures/223be5b2-7411-434d-9416-e62cea7d0b0b.jpg?im_w=1200",
     "imgs": [
-      "https://a0.muscache.com/im/pictures/37366830/8c31e816_original.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/223be5b2-7411-434d-9416-e62cea7d0b0b.jpg?im_w=1200",
       "https://a0.muscache.com/im/pictures/c9920082-e745-4fb4-9c05-c2e960c436ae.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/23a9c01c-4229-4673-ba3b-23f1ef4977d5.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/e0cb820c-4c6d-4acf-b4a1-36a816df826d.jpg?im_w=720",

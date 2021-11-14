@@ -16,10 +16,10 @@ return<Col xs={12}sm={12} md={6} lg={6} xl={3}> <div className=" flex item-cente
 flex-flow: column wrap;" >
  
   
-    <Image src={card.img}rounded layout="fill" className="rounded-lg"style={{width:'100px',borderRadius:'20px'}}/>
-         <div style={{float:'right', marginTop:'20px'}}>
-        <h6 style={{fontsize:'15px'}}>{card.location}</h6>
-        <h6 style={{fontsize:'15px'}}>{card.distance}</h6>
+    <Image src={card.img}rounded layout="fill" className="rounded-lg"/>
+         <div className="location-distance" >
+        <h6 >{card.location}</h6>
+        <h6>{card.distance}</h6>
         </div>
 </div> </Col>
             } 
