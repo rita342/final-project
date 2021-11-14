@@ -6,6 +6,7 @@ import { useState } from "react";
 import items from "../data/menu.json";
 import { Link } from "react-router-dom";
 import { BiGlobe, BiSearch } from "react-icons/bi";
+import FooterHome from "./FooterHome"
 const Home = ({ history }) => {
   return (
     <>
@@ -46,6 +47,9 @@ const Home = ({ history }) => {
       </div>
       <div>
         <MediumCard />
+      </div>
+       <div>
+       
       </div>
     </>
   );
