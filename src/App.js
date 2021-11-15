@@ -3,12 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MyNavbar from "./components/MyNavbar";
 
 import Home from "./components/Home";
-import Reservations from "./components/Reservations";
+
 import { BrowserRouter, Route } from "react-router-dom";
 import Menu from "./components/Menu";
 import { Switch } from "react-router";
 import HouseDetails from "./components/HouseDetails";
-import { FaAirbnb } from "react-icons/fa";
+
 import "./App.css";
 import FavoriteProvider from "./store/Favorite";
 import Favorite from "./components/Favorite";

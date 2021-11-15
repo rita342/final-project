@@ -2,15 +2,16 @@ import { useContext, useEffect, useState } from "react";
 import items from "../data/menu.json";
 import DatePicker from "./DatePickerComponent";
 import Modal from "./Modal";
-
+import { Link } from "react-router-dom";
 import Rating from "./Rating";
 import Reserve from "./Reserve";
 import Footer from "./Footer";
 import styles from "./HouseDetails.module.css";
 import { AiOutlineHome } from "react-icons/ai";
-import { BsKey } from "react-icons/bs";
+import { BsKey, BsCart } from "react-icons/bs";
 import { MdDateRange } from "react-icons/md";
 import { FavoriteContext } from "../store/Favorite";
+import { AiFillStar } from "react-icons/ai";
 const HouseDetails = ({ match }) => {
   const context = useContext(FavoriteContext);
 
@@ -73,11 +74,36 @@ const HouseDetails = ({ match }) => {
               </div>
               <div className={styles["house-actions"]}>
                 {context.isFavorite(houseItem) ? (
-                  <button onClick={removeFavoriteHandler}>Remove</button>
+                  <button
+                    onClick={removeFavoriteHandler}
+                    style={{
+                      background: "#ff1493",
+                      color: "white",
+                      borderRadius: "1rem",
+                      border: "1px solid #ff1493",
+                    }}
+                  >
+                    Remove
+                  </button>
                 ) : (
-                  <button onClick={saveFavoriteHandler}>Save</button>
+                  <button
+                    onClick={saveFavoriteHandler}
+                    style={{
+                      background: "green",
+                      color: "white",
+                      borderRadius: "1rem",
+                      border: "1px solid green",
+                    }}
+                  >
+                    Save
+                  </button>
                 )}
+                <Link to="/favorite">
+                  {" "}
+                  <BsCart style={{ fontSize: "1.5rem", color: "#ff1493" }} />
+                </Link>
               </div>
+              <hr />
             </div>
           </div>
           <div className="grid-container" style={{ marginTop: "1rem" }}>
@@ -90,8 +116,8 @@ const HouseDetails = ({ match }) => {
             })}
           </div>
           <div className="room-num" style={{ marginTop: "2rem" }}>
-            <h5>Treehouse hosted by John</h5>
-            <span>{houseItem.numberOfRoom}</span>
+            <AiFillStar />
+            {""} {houseItem.numberOfRoom}
           </div>
           <hr style={{ marginRight: "25rem" }} />
           <div className="room-num" style={{ marginTop: "2rem" }}>
@@ -110,7 +136,9 @@ const HouseDetails = ({ match }) => {
             </div>
             <span></span>
           </div>
-          <hr style={{ marginRight: "25rem" }} />. {houseItem.description}
+          <hr style={{ marginRight: "25rem" }} />
+          <AiFillStar />
+          {houseItem.description}
           <hr style={{ marginRight: "25rem" }} />
           <div className={styles["house-details-container"]}>
             <div className="house-details">

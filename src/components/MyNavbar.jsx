@@ -50,11 +50,16 @@ function MyNavbar({ brand, history, location, match }) {
                   style={{ fontSize: "20px", color: "black" }}
                 />
               </div>
-
-              <Link to="/favorite">
-                <BiGlobe style={{ fontSize: "20px", color: "black" }} />
-              </Link>
-
+              <div>
+                {" "}
+                <BiGlobe
+                  style={{
+                    fontSize: "20px",
+                    color: "black",
+                    marginTop: "13px",
+                  }}
+                />
+              </div>
               <Nav.Link>
                 <FaUserCircle style={{ fontSize: "20px", color: "black" }} />
               </Nav.Link>

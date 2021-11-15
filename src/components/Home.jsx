@@ -9,18 +9,26 @@ const Home = ({ history }) => {
       <div className="cover">
         <div className="relative">
           <img
-            src="https://a0.muscache.com/im/pictures/9d928940-f0d1-4504-99d3-b69a5f737012.jpg?im_w=1200"
+            src="https://a0.muscache.com/im/pictures/d7c1f140-c33a-4d68-aaf8-b7b8d7292b11.jpg?im_w=1200"
             layout="fill"
             objectFit="cover"
             style={{
               backgroundRepeat: "no-repeat",
               width: "100%",
-              position: "relative",
             }}
           />
-          <h5 className="tree-quote">
-            "TREE HOUSES ARE THE ULTIMATE RETURN TO NATURE"
-          </h5>
+          <div>
+            <h5 className="tree-quote">
+              <span>"TREE</span>
+              <span> HOUSES</span>
+              <span>ARE </span>
+              <span>THE </span>
+              <span>ULTIMATE</span>
+              <span>RETURN </span>
+              <span>TO </span>
+              <span>NATURE"</span>
+            </h5>
+          </div>
 
           <button
             onClick={() => {

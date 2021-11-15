@@ -7,11 +7,14 @@ export default function Favorite() {
   const context = useContext(FavoriteContext);
   return (
     <div>
-      <h1>Your Favorite Places</h1>
       {context.favorites.length ? (
         <HouseList items={context.favorites}></HouseList>
       ) : (
-        <h2>You do not have any favorite</h2>
+        <div className="empty-box">
+          {" "}
+          <h5> You do not have any favorite</h5>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9j9x2aj-G0MA0iGLX5V96ZwDS0lF770E0qw&usqp=CAU" />
+        </div>
       )}
       <Footer />
     </div>
