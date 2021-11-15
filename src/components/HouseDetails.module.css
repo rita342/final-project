@@ -24,11 +24,12 @@
 
 .house-image:first-of-type {
   grid-row: span 2;
-  width: 400px;
+  width: 500px;
 }
 .house-image > img {
   width: 100%;
   height: 100%;
+
   margin-bottom: 33px;
 }
 .house-details-container {
@@ -39,4 +40,10 @@
 .room-num {
   margin-top: 3rem;
   color: brown;
+}
+.house-actions {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  justify-content: space-between;
 }

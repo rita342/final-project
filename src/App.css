@@ -1,17 +1,57 @@
 .tree-quote {
   position: absolute;
-  top: 25%;
-  left: 30%;
-  color: white;
+  top: 10%;
+  left: 20%;
+  color: Suns Purple;
   font-family: Lucida Handwriting, Brush Script MT, cursive;
   font-weight: 700;
-  font-size:25px  
+  font-size: 35px;
 }
-
-  .cover{
-    position: relative;
+.tree-quote span {
+  opacity: 0;
+  display: inline-block;
+  animation: animate 1s linear forwards;
+  padding: 0.3em;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+    filter: blur(10px);
   }
-
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+    filter: blur(0px);
+  }
+}
+h5 span:nth-child(1) {
+  animation-delay: 1s;
+}
+h5 span:nth-child(2) {
+  animation-delay: 2s;
+}
+h5 span:nth-child(3) {
+  animation-delay: 2.5s;
+}
+h5 span:nth-child(4) {
+  animation-delay: 3s;
+}
+h5 span:nth-child(5) {
+  animation-delay: 3.5s;
+}
+h5 span:nth-child(6) {
+  animation-delay: 4s;
+}
+h5 span:nth-child(7) {
+  animation-delay: 4.5s;
+}
+h5 span:nth-child(8) {
+  animation-delay: 5s;
+}
+.cover {
+  position: relative;
+}
 
 @media screen and (max-width: 600px) {
   .tree-quote {
@@ -20,34 +60,41 @@
 }
 
 .flexible-btn {
-position:absolute;
-  color:purple;
-  background-color: white;
-  width: 7rem;
-display: flex;
- left: 40%;
-border:1px solid grey;
-  top: 55%;
-  border-radius: 20px;
-  font-size:1rem;
- 
+  cursor: pointer;
+  position: absolute;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 2em;
+  top: 35%;
+  font-size: 2rem;
+  padding: 1rem 3rem;
   font-weight: 700;
-  
+  color: Purple;
+}
+@media screen and (max-width: 600px) {
+  .flexible-btn {
+    left: 2%;
+    padding: 0.1rem, 0.5rem;
+    top: 15%;
+  }
 }
 
-
-.rounded-lg{
-width:100px;
-border-radius:20px
+.rounded-lg {
+  width: 100px;
+  border-radius: 20px;
 }
 
-.location-distance{
-  float:right;
-   margin-top:20px;
+.location-distance {
+  float: right;
+  margin-top: 20px;
 }
-.card h5{
-color:#ff1493;
-text-align:center;
+.card h5 {
+  color: #ff1493;
+  text-align: center;
 }
 #nav li {
   position: relative;
@@ -362,21 +409,33 @@ nav.user-button {
   }
 }
 
-.reserve-btn{
- 
-    margin-top: 2rem;
-    width: 285px;
-    height: 3rem;
-    color: white;
-    background: #E6007E;
-    border: 1px solid #bdbdbd;
-    border-radius: 10px;
+.reserve-btn {
+  margin-top: 2rem;
+  width: 285px;
+  height: 3rem;
+  color: white;
+  background: #e6007e;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
 }
 .dropdown-basic {
   background: white;
-    border: 1px solid #bdbdbd;
-    width: 285px;
-   margin-top: -10px;
-   
-  
+  border: 1px solid #bdbdbd;
+  width: 285px;
+  margin-top: -10px;
+}
+.empty-box {
+  animation-duration: 4s;
+  animation-name: example;
+  margin-left: 25%;
+}
+@keyframes example {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 200px;
+    top: 0px;
+  }
 }

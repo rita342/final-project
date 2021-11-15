@@ -45,20 +45,20 @@ export default function Reserve(props) {
     <div className={styles["reserve"]}>
       <Rating />
       <div className="reservation-price">
-        <strike>{getPrice()} zł</strike>
-        <span>{getReducedPrice()} zł</span> / night
+        <strike>{getPrice()} $</strike>
+        <span>{getReducedPrice()} $</span> / night
       </div>
       <DatePicker onChange={reservationDateRangeChangeHandler} />
       <Guests onChange={guestsCountChangeHandler} />
       <div className="reservation">
         <div>
           <div>
-            <span>Number of Days</span>
+            <span>Number of Days : </span>
             <span>{getReservationDaysCount()}</span>
           </div>
           <div>
-            <span>Total Price</span>
-            <span>{getTotalPrice()} zł</span>
+            <span>Total Price : </span>
+            <span>{getTotalPrice()} $</span>
           </div>
         </div>
         <button className="reserve-btn" onClick={reserveHandler}>

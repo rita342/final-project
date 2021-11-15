@@ -55,7 +55,7 @@ export default function HouseList({ items }) {
                   </Link>
                   <div style={{ float: "right", marginTop: "20px" }}>
                     <p style={{ fontSize: "12px" }}>
-                      {val.name} price: {val.price}$
+                      {val.country}: {val.name} price: {val.price}$
                     </p>
                   </div>
                 </Col>
