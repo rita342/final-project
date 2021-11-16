@@ -9,10 +9,10 @@ function Guests(props) {
     children: 0,
     adult: 0,
   });
-  function guestCountChangeHandler(guestType, num) {
+  function guestCountChangeHandler(guestType, number) {
     const newGuestsCount = {
       ...guestsCount,
-      [guestType]: guestsCount[guestType] + num,
+      [guestType]: guestsCount[guestType] + number,
     };
     setGuestCount(newGuestsCount);
     props.onChange(newGuestsCount);
@@ -35,7 +35,7 @@ function Guests(props) {
             <div style={{ fontSize: "14px" }}>GUESTS</div>
             <span style={{ fontSize: "13px" }}>
               {" "}
-              {guestsCount.infant} Infants
+              {guestsCount.infant} adults
             </span>{" "}
             <span style={{ fontSize: "13px" }}>
               {" "}
@@ -43,7 +43,7 @@ function Guests(props) {
             </span>
             <span style={{ fontSize: "13px" }}>
               {" "}
-              {guestsCount.adult} Adults
+              {guestsCount.adult} infants
             </span>
           </div>
         </Dropdown.Toggle>

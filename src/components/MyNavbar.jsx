@@ -1,15 +1,12 @@
-import { Navbar, Nav, Button, Card } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { MdOutlineHouseSiding } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import { FaAirbnb } from "react-icons/fa";
 import { BiGlobe } from "react-icons/bi";
 import { FaUserCircle } from "react-icons/fa";
-import { useState } from "react";
 
-function MyNavbar({ brand, history, location, match }) {
-  const [show, setShow] = useState(true);
-  const [show2, setShow2] = useState(true);
+function MyNavbar({ brand, history }) {
   return (
     <div className="flex-center">
       <div className="screen">

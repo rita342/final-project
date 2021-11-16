@@ -12,7 +12,7 @@ export default function Favorite() {
       ) : (
         <div className="empty-box">
           {" "}
-          <h5> You do not have any favorite</h5>
+          <h3> You do not have any reservation!!</h3>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9j9x2aj-G0MA0iGLX5V96ZwDS0lF770E0qw&usqp=CAU" />
         </div>
       )}

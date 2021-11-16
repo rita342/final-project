@@ -20,7 +20,7 @@ export default function Reserve(props) {
       endDate,
     });
   }
-  function getReservationDaysCount(params) {
+  function getReservationDaysCount() {
     if (!reservationDateRange) return 0;
     return moment(reservationDateRange.endDate).diff(
       moment(reservationDateRange.startDate),
