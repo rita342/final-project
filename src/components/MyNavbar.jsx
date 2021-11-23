@@ -15,7 +15,7 @@ function MyNavbar({ brand, history }) {
           expand="md"
           bg="pink"
           variant="white"
-          style={{ height: "70px", background: "white", position: "static" }}
+          style={{ height: "50px", background: "white", position: "static" }}
         >
           <Link to="/">
             <h1 style={{ color: "#ff1493" }}>
@@ -49,13 +49,16 @@ function MyNavbar({ brand, history }) {
               </div>
               <div>
                 {" "}
-                <BiGlobe
-                  style={{
-                    fontSize: "20px",
-                    color: "black",
-                    marginTop: "13px",
-                  }}
-                />
+                <Link to="/favorite">
+                  {" "}
+                  <BiGlobe
+                    style={{
+                      fontSize: "20px",
+                      color: "black",
+                      marginTop: "13px",
+                    }}
+                  />{" "}
+                </Link>
               </div>
               <Nav.Link>
                 <FaUserCircle style={{ fontSize: "20px", color: "black" }} />

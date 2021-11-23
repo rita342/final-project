@@ -45,7 +45,7 @@ export default function Reserve(props) {
     <div className={styles["reserve"]}>
       <Rating />
       <div className="reservation-price">
-        <strike>{getPrice()} $</strike>
+        <strike style={{ color: "grey" }}>{getPrice()} $</strike>
         <span>{getReducedPrice()} $</span> / night
       </div>
       <DatePicker onChange={reservationDateRangeChangeHandler} />
@@ -54,11 +54,11 @@ export default function Reserve(props) {
         <div>
           <div>
             <span>Number of Days : </span>
-            <span>{getReservationDaysCount()}</span>
+            <span style={{ float: "right" }}>{getReservationDaysCount()}</span>
           </div>
           <div>
             <span>Total Price : </span>
-            <span>{getTotalPrice()} $</span>
+            <span style={{ float: "right" }}>{getTotalPrice()} $</span>
           </div>
         </div>
         <button className="reserve-btn" onClick={reserveHandler}>

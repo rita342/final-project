@@ -6,17 +6,15 @@ import Home from "./components/Home";
 
 import { BrowserRouter, Route } from "react-router-dom";
 import Menu from "./components/Menu";
+import GiftComponent from "./components/GiftComponent";
 import { Switch } from "react-router";
 import HouseDetails from "./components/HouseDetails";
 
 import "./App.css";
 import FavoriteProvider from "./store/Favorite";
 import Favorite from "./components/Favorite";
-// for using a Route, you have to be inside a Router
 
 function App() {
-  // advanced stuff!
-  // const myFunction = () => console.log('hello')
   return (
     <div
       stye={{
@@ -36,9 +34,8 @@ function App() {
             />
             <Route path="/favorite" exact component={Favorite} />
             <Route path="/menu" exact component={Menu} />
-            {/* Route is taking our component as a prop, and returning something new! */}
-            {/* it's creating a HOC - Higher-order component */}
 
+            <Route path="/GiftComponent" exact component={GiftComponent} />
             <Route path="/details/:houseId" component={HouseDetails} />
 
             <Route component={() => <h1>404</h1>} />
