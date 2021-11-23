@@ -7,7 +7,10 @@ export default function HouseList({ items }) {
   return (
     <>
       <Container style={{ marginTop: "3rem" }}>
-        <div>
+        <h1 style={{ marginLeft: "8rem" }}>
+          Tree house are the ultimate return to nature
+        </h1>
+        <div style={{ marginTop: "4rem" }}>
           <input
             type="text"
             placeholder="    search... "
