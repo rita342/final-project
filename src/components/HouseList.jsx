@@ -1,4 +1,4 @@
-import { Badge, Col, Container, Row, Image, Card } from "react-bootstrap";
+import { Col, Container, Row, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { AiFillHeart } from "react-icons/ai";
@@ -10,11 +10,14 @@ export default function HouseList({ items }) {
         <div>
           <input
             type="text"
-            placeholder="search... "
+            placeholder="    search... "
             onChange={(event) => {
               setSearchTerm(event.target.value);
             }}
-            style={{ borderRadius: "10px" }}
+            style={{
+              borderRadius: "30px",
+              border: "1px solid grey",
+            }}
           />
         </div>
 
@@ -53,7 +56,7 @@ export default function HouseList({ items }) {
                       }}
                     />
                   </Link>
-                  <div style={{ float: "right", marginTop: "20px" }}>
+                  <div style={{ marginTop: "5px" }}>
                     <p style={{ fontSize: "12px" }}>
                       {val.country}: {val.name} price: {val.price}$
                     </p>

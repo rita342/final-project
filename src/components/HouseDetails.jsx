@@ -98,10 +98,6 @@ const HouseDetails = ({ match }) => {
                     Save
                   </button>
                 )}
-                <Link to="/favorite">
-                  {" "}
-                  <BsCart style={{ fontSize: "1.5rem", color: "#ff1493" }} />
-                </Link>
               </div>
               <hr />
             </div>
@@ -137,7 +133,6 @@ const HouseDetails = ({ match }) => {
             <span></span>
           </div>
           <hr style={{ marginRight: "25rem" }} />
-          <AiFillStar />
           {houseItem.description}
           <hr style={{ marginRight: "25rem" }} />
           <div className={styles["house-details-container"]}>

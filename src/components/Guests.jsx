@@ -25,9 +25,7 @@ function Guests(props) {
           style={{
             background: "white",
             border: "1px solid #bdbdbd",
-            width: "285px",
-
-            marginTop: "-10px",
+            width: "100%",
             color: "black",
           }}
         >

@@ -1,33 +1,53 @@
-import React,{Component} from 'react';
-import smallCard from "../data/smallCard.json"
-import {Col,Image,Container,Row} from 'react-bootstrap'
+import React from "react";
+import smallCard from "../data/smallCard.json";
+import { Col, Image, Container, Row } from "react-bootstrap";
 
-
-const CardComponent=()=>{
- 
-        return (
-
-         <Container>
-            <Row className="flex flex-wrap ">
-
-         {
-            smallCard.map(card => {
-return<Col xs={12}sm={12} md={6} lg={6} xl={3}> <div className=" flex item-center m-2 mt-5 space-x-4 rounded-xl 
-flex-flow: column wrap;" >
- 
-  
-    <Image src={card.img}rounded layout="fill" className="rounded-lg"/>
-         <div className="location-distance" >
-        <h6 >{card.location}</h6>
-        <h6>{card.distance}</h6>
-        </div>
-</div> </Col>
-            } 
-)
- }
-   
-    </Row>
+const CardComponent = () => {
+  return (
+    <Container style={{ marginTop: "5rem" }}>
+      <Row className="small-card">
+        <Col xs={12} md={6} lg={6} xl={3}>
+          <div className="card">
+            <Image
+              src="https://images.adsttc.com/media/images/5dea/0090/3312/fdbc/3500/01fb/large_jpg/02-%E6%A0%91%E5%B1%8B%E5%BB%BA%E7%AD%91%E5%8F%8A%E6%99%AF%E8%A7%82%E7%A9%BA%E9%97%B4%E6%95%B4%E4%BD%93%E9%B8%9F%E7%9E%B02.jpg?1575616647"
+              layout="fill"
+              style={{ borderRadius: "10rem" }}
+            />
+            <h5>china</h5>
+          </div>
+        </Col>
+        <Col xs={12} md={6} lg={6} xl={3}>
+          <div className="card">
+            <Image
+              src="https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco/at%2Farchive%2Fe2cac08a7934907541cde56b40f13a555ef415b1"
+              layout="fill"
+              style={{ borderRadius: "10rem" }}
+            />
+            <h5>france</h5>
+          </div>
+        </Col>
+        <Col xs={12} md={6} lg={6} xl={3}>
+          <div className="card">
+            <Image
+              src="https://kerdowney.com/content/uploads/2013/04/Aranwa-Sala-de-Oxigenacion-01.jpg"
+              layout="fill"
+              style={{ borderRadius: "10rem" }}
+            />
+            <h5>peru</h5>
+          </div>
+        </Col>
+        <Col xs={12} md={6} lg={6} xl={3}>
+          <div className="card">
+            <Image
+              src="https://treehousemap.com/wp-content/uploads/2015/02/Treehouse-in-Italy-Toscana-casaBARTHEL-Florence-051.jpg"
+              layout="fill"
+              style={{ borderRadius: "10rem" }}
+            />
+            <h5>italy</h5>
+          </div>
+        </Col>
+      </Row>
     </Container>
-        ) 
-}
-export default CardComponent
+  );
+};
+export default CardComponent;
