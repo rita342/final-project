@@ -12,6 +12,7 @@ import { BsKey, BsCart } from "react-icons/bs";
 import { MdDateRange } from "react-icons/md";
 import { FavoriteContext } from "../store/Favorite";
 import { AiFillStar } from "react-icons/ai";
+import { AiOutlineDelete, AiOutlineSave } from "react-icons/ai";
 const HouseDetails = ({ match }) => {
   const context = useContext(FavoriteContext);
 
@@ -74,29 +75,19 @@ const HouseDetails = ({ match }) => {
               </div>
               <div className={styles["house-actions"]}>
                 {context.isFavorite(houseItem) ? (
-                  <button
+                  <AiOutlineDelete
                     onClick={removeFavoriteHandler}
                     style={{
-                      background: "#ff1493",
-                      color: "white",
-                      borderRadius: "1rem",
-                      border: "1px solid #ff1493",
+                      color: "red",
                     }}
-                  >
-                    Remove
-                  </button>
+                  />
                 ) : (
-                  <button
+                  <AiOutlineSave
                     onClick={saveFavoriteHandler}
                     style={{
-                      background: "green",
-                      color: "white",
-                      borderRadius: "1rem",
-                      border: "1px solid green",
+                      color: "blue",
                     }}
-                  >
-                    Save
-                  </button>
+                  />
                 )}
               </div>
               <hr />
