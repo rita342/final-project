@@ -22,7 +22,7 @@ function MyNavbar({ brand, history }) {
               {" "}
               <Navbar.Brand>
                 {brand}
-                <FaAirbnb style={{ fontSize: "20px", color: "#ff1493" }} />
+                <FaAirbnb style={{ fontSize: "25px", color: "#ff1493" }} />
               </Navbar.Brand>
             </h1>
           </Link>
@@ -31,7 +31,7 @@ function MyNavbar({ brand, history }) {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
               <div
-                style={{ fontSize: "13px", color: "black", marginTop: "13px" }}
+                style={{ fontSize: "17px", color: "black", marginTop: "13px" }}
               >
                 become a host
               </div>
@@ -44,24 +44,34 @@ function MyNavbar({ brand, history }) {
                 style={{ cursor: "pointer" }}
               >
                 <MdOutlineHouseSiding
-                  style={{ fontSize: "20px", color: "black" }}
+                  style={{
+                    fontSize: "17px",
+                    color: "black",
+                    marginTop: "10px",
+                  }}
                 />
               </div>
-              <div>
-                {" "}
-                <Link to="/favorite">
-                  {" "}
+
+              <Link to="/favorite">
+                <div>
                   <BiGlobe
                     style={{
-                      fontSize: "20px",
+                      fontSize: "17px",
                       color: "black",
-                      marginTop: "13px",
+                      marginTop: "19px",
                     }}
                   />{" "}
-                </Link>
-              </div>
+                </div>
+              </Link>
+
               <Nav.Link>
-                <FaUserCircle style={{ fontSize: "20px", color: "black" }} />
+                <FaUserCircle
+                  style={{
+                    fontSize: "17px",
+                    color: "black",
+                    marginTop: "13px",
+                  }}
+                />
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

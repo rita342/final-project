@@ -1,5 +1,4 @@
 import React from "react";
-import smallCard from "../data/smallCard.json";
 import { Col, Image, Container, Row } from "react-bootstrap";
 
 const CardComponent = () => {
@@ -39,7 +38,7 @@ const CardComponent = () => {
         <Col xs={12} md={6} lg={6} xl={3}>
           <div className="card">
             <Image
-              src="https://treehousemap.com/wp-content/uploads/2015/02/Treehouse-in-Italy-Toscana-casaBARTHEL-Florence-051.jpg"
+              src="https://theitalianwanderer.com/wp-content/uploads/2018/07/San-Luis5_Unterkunft-2-e1479397386599.jpg"
               layout="fill"
               style={{ borderRadius: "10rem" }}
             />

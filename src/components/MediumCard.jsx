@@ -6,103 +6,98 @@ import { Link } from "react-router-dom";
 
 const MediumCard = ({ history }) => {
   return (
-    <div>
-      <div
+    <Container style={{ marginTop: "5rem" }}>
+      <h4
         style={{
-          marginTop: "10rem",
-          borderRadius: "25px 75px 63px ",
-          boxShadow: "10px 14px 8px 10px rgba(1, 1, 1, 0.2)",
+          display: "flex",
+          alignItems: "cente",
+          justifyContent: "center",
+          color: "black",
         }}
       >
-        <Image
-          src="https://c4.wallpaperflare.com/wallpaper/138/751/615/new-year-fireworks-snow-bisbiswas-trees-hd-wallpaper-preview.jpg"
-          layout="fill"
-          width=" 100%"
+        introducing
+      </h4>
+      <h4
+        style={{
+          color: "black",
+          fontSize: "4rem",
+          display: "flex",
+          alignItems: "cente",
+          justifyContent: "center",
+        }}
+      >
+        Airbnb gift cards
+      </h4>
+
+      <div>
+        <div
           style={{
+            marginTop: "3rem",
+            borderRadius: "25px 75px 63px ",
+
             position: "relative",
           }}
-        />
-        <div>
-          <h4>
-            <Image
-              src="https://a0.muscache.com/im/pictures/aed25c7b-dfd5-45e2-aec9-0eb4d9a21e08.jpg?im_w=960"
-              width="30%"
-              style={{
-                position: "absolute",
-                marginTop: "-50%",
-                left: "60%",
-              }}
-            />
-          </h4>
-
-          <h4
+        >
+          <Image
+            src="https://img2.goodfon.com/wallpaper/nbig/f/30/christmas-night-winter-snow-6994.jpg"
+            layout="fill"
+            width=" 100%"
+            height="100%"
             style={{
-              position: "absolute",
-              marginTop: "-48%",
-              left: "15%",
-              color: "white",
-              fontSize: "3rem",
-              overflow: "hidden",
+              borderRadius: "5rem",
+              boxShadow: "10px 14px 8px 10px rgba(1, 1, 1, 0.2)",
             }}
-          >
-            Airbnb gift cards
-          </h4>
-          <Link to="/GiftComponent">
-            <button
-              style={{
-                position: "absolute",
-                marginTop: "-42%",
-                left: "23%",
-                color: "white",
-                overflow: "hidden",
-                background: "black",
-                border: "1px solid black",
-                borderRadius: "2rem",
-                padding: "0.5rem 0.5rem",
-              }}
-            >
-              shop now
-            </button>
-          </Link>
+          />
+          <div>
+            <h4>
+              <Image
+                src="https://a0.muscache.com/im/pictures/b3275f8d-4341-4800-bdf2-04be20e9112d.jpg?im_w=480"
+                width="30%"
+                style={{
+                  position: "absolute",
+                  marginTop: "-30%",
+                  left: "60%",
+                  transform: "rotate(60deg)",
+                }}
+              />
+            </h4>
+            <h4>
+              <Image
+                src="https://a0.muscache.com/im/pictures/5a262127-6957-4e1e-b87d-df6674c07d7a.jpg?im_w=480"
+                width="30%"
+                style={{
+                  position: "absolute",
+                  marginTop: "-55%",
+                  left: "60%",
+                  transform: "rotate(120deg)",
+                }}
+              />
+            </h4>
+
+            <Link to="/GiftComponent">
+              <button
+                style={{
+                  marginTop: "-40%",
+                  left: "33%",
+                  color: "gray",
+                  position: "absolute",
+
+                  border: "1px solid white",
+                  borderRadius: "2rem",
+                  padding: "0.5rem 1.5rem",
+                  background: "white",
+                }}
+              >
+                shop now
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div style={{ marginTop: "5rem" }}>
+          <FooterHome />
         </div>
       </div>
-
-      <Container style={{ marginTop: "5rem" }}>
-        <Row>
-          <Col xs={12} md={6} lg={6} xl={6}>
-            <div>
-              <div style={{ background: "black", height: "300px" }}></div>
-            </div>
-            <h5>Out Door collection</h5>
-            <p>Experiences tht immerse you in nature</p>
-          </Col>
-          <Col xs={12} md={6} lg={6} xl={6}>
-            <div>
-              <Image
-                src={img41}
-                layout="fill"
-                style={{ height: "300px", width: "100%" }}
-              />
-            </div>
-            <h5>Online Experiences</h5>
-            <p>Live interactive activities led by Hosts</p>
-          </Col>
-        </Row>
-        <div>
-          <h2
-            style={{
-              fontize: "27px",
-              marginTop: "20px",
-              marginRigh: "30px",
-              fontWeight: "500px",
-            }}
-          >
-            <strong>Inspiration for future get ways</strong>
-          </h2>
-        </div>
-        <FooterHome />
-      </Container>
-    </div>
+    </Container>
   );
 };
 
