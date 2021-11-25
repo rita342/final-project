@@ -1,34 +1,75 @@
 import React, { Component } from "react";
 import { Col, Container, Row, Image, Nav } from "react-bootstrap";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 const GiftComponent = () => {
   return (
     <>
       <Container>
-        <h1
+        <button
           style={{
-            alignItems: "center",
+            alignItems: "end",
             display: "flex",
-            justifyContent: "center",
-            fontSize: "7rem",
-            marginTop: "10rem",
+            justifyContent: "right",
+            color: "white",
+            background: "pink",
           }}
         >
-          Airbnb Gift Cards
-        </h1>
-
-        <div>
-          <img
-            src="https://a0.muscache.com/im/pictures/aed25c7b-dfd5-45e2-aec9-0eb4d9a21e08.jpg?im_w=960"
-            width="80%"
+          Buy The Gift Card
+        </button>
+        <Link to="/PaymentComponent/">
+          <h1
             style={{
               alignItems: "center",
               display: "flex",
               justifyContent: "center",
-
-              marginTop: "10rem",
+              fontSize: "5rem",
+              marginTop: "5%",
             }}
-          />
+          >
+            Airbnb Gift Cards
+          </h1>
+        </Link>
+
+        <div
+          style={{
+            position: "relative",
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "20%",
+          }}
+        >
+          <Col
+            style={{
+              position: "absolute",
+              left: "45%",
+            }}
+          >
+            <img
+              src="https://a0.muscache.com/im/pictures/5a262127-6957-4e1e-b87d-df6674c07d7a.jpg?im_w=480"
+              width="30%"
+              style={{
+                Top: "3rem",
+                transform: "rotate(120deg)",
+              }}
+            />
+          </Col>
+          <Col
+            style={{
+              position: "absolute",
+              left: "15%",
+            }}
+          >
+            <img
+              src="https://a0.muscache.com/im/pictures/b3275f8d-4341-4800-bdf2-04be20e9112d.jpg?im_w=480"
+              style={{
+                Top: "3rem",
+                width: "30%",
+                transform: "rotate(60deg)",
+              }}
+            />
+          </Col>
         </div>
 
         <div
@@ -36,12 +77,15 @@ const GiftComponent = () => {
             alignItems: "center",
             display: "flex",
             justifyContent: "center",
+            marginTop: "25%",
           }}
         >
           <img
-            src="https://a0.muscache.com/im/pictures/ad4481c2-d06c-47a1-9de9-2d76c4c0c832.jpg?im_w=1680"
+            src="https://a0.muscache.com/im/pictures/9196e84a-47e1-4fd2-8a6d-dc9face35440.jpg?im_w=1680"
             style={{
               width: "100%",
+              height: "100%",
+              borderRadius: "2rem",
             }}
           />
         </div>

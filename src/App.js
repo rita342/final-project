@@ -9,7 +9,7 @@ import Menu from "./components/Menu";
 import GiftComponent from "./components/GiftComponent";
 import { Switch } from "react-router";
 import HouseDetails from "./components/HouseDetails";
-
+import PaymentComponent from "./components/PaymentComponent";
 import "./App.css";
 import FavoriteProvider from "./store/Favorite";
 import Favorite from "./components/Favorite";
@@ -37,8 +37,11 @@ function App() {
 
             <Route path="/GiftComponent" exact component={GiftComponent} />
             <Route path="/details/:houseId" component={HouseDetails} />
-
-            <Route component={() => <h1>404</h1>} />
+            <Route
+              path="/PaymentComponent"
+              exact
+              component={PaymentComponent}
+            />
           </Switch>
         </BrowserRouter>
       </FavoriteProvider>

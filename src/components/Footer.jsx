@@ -3,9 +3,9 @@ import { BsTwitter } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <div style={{ width: "100%" }}>
-      <hr style={{ background: "grey" }} />
-      <div className="container" style={{ fontSize: "11px", color: "grey" }}>
+    <div style={{ width: "100%", marginTop: "10rem" }}>
+      <hr style={{ background: "#E8E8E8" }} />
+      <div className="container" style={{ fontSize: "11px", color: "#E8E8E8" }}>
         <div
           className="row"
           style={{
