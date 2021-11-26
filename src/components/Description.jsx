@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 import items from "../data/menu.json";
 
 export default function Description() {

@@ -4,6 +4,8 @@ export default function Modal(props) {
   return (
     <div className={styles["backdrop"]} onClick={props.onCancel}>
       <div className={styles["modal"]} onClick={(e) => e.stopPropagation()}>
+
+         {/* this is tp stop click propagation to the native dcument*/}
         <h2>{props.title}</h2>
         {props.children}
         <div className={styles["actions"]}>

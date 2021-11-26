@@ -6,30 +6,32 @@ const GiftComponent = () => {
   return (
     <>
       <Container>
-        <button
-          style={{
-            alignItems: "end",
-            display: "flex",
-            justifyContent: "right",
-            color: "white",
-            background: "pink",
-          }}
-        >
-          Buy The Gift Card
-        </button>
         <Link to="/PaymentComponent/">
-          <h1
+          <button
             style={{
-              alignItems: "center",
-              display: "flex",
-              justifyContent: "center",
-              fontSize: "5rem",
-              marginTop: "5%",
+              float: "right",
+              color: "white",
+              background: "#ff69b4",
+              borderRadius: "4rem",
+              border: "1px solid #ff69b4",
             }}
           >
-            Airbnb Gift Cards
-          </h1>
+            Buy The Gift Card
+          </button>
         </Link>
+
+        <div
+          style={{
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+            fontSize: "4rem",
+            marginTop: "10%",
+            color: "#66D3FA",
+          }}
+        >
+          <h1>Airbnb Gift Cards</h1>
+        </div>
 
         <div
           style={{
