@@ -55,7 +55,7 @@ const MediumCard = ({ history }) => {
                 width="30%"
                 style={{
                   position: "absolute",
-                  marginTop: "-30%",
+                  marginTop: "-50%",
                   left: "60%",
                   transform: "rotate(60deg)",
                 }}
@@ -67,7 +67,7 @@ const MediumCard = ({ history }) => {
                 width="30%"
                 style={{
                   position: "absolute",
-                  marginTop: "-55%",
+                  marginTop: "-35%",
                   left: "60%",
                   transform: "rotate(120deg)",
                 }}
@@ -79,10 +79,9 @@ const MediumCard = ({ history }) => {
                 style={{
                   marginTop: "-40%",
                   left: "33%",
-                  color: "gray",
+                  color: " #3C99DC",
                   position: "absolute",
-
-                  border: "1px solid white",
+                  border: "1px solid #66D3FA",
                   borderRadius: "2rem",
                   padding: "0.5rem 1.5rem",
                   background: "white",

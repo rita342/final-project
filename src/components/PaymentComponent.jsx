@@ -17,7 +17,7 @@ class PaymentComponent extends React.Component {
             alignItems: "center",
             display: "flex",
             justifyContent: "center",
-            backfaceVisibility: "black",
+           
           }}
         >
           <div>
