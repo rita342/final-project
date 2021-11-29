@@ -5,7 +5,6 @@ import Footer from "./Footer";
 export default function Menu() {
   return (
     <div>
-      
       <HouseList items={items}></HouseList>
       <Footer />
     </div>

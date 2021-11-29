@@ -2,12 +2,27 @@ import Rating from "./Rating";
 import styles from "./Reserve.module.css";
 import DatePicker from "./DatePickerComponent";
 import Guests from "./Guests";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import moment from "moment";
 
 export default function Reserve(props) {
-  const [guestsCount, setGuestsCount] = useState(null);
+  const [guestsCount, setGuestsCount] = useState(null, () => {
+    const localData = localStorage.getItem(guestsCount);
+    return localData ? JSON.parse(localData) : [];
+  });
+
   const [reservationDateRange, setReservationDateRange] = useState(null);
+  useEffect(() => {
+    localStorage.setItem("guestCount", JSON.stringify(guestsCount));
+  }, [guestsCount]);
+
+  useEffect(() => {
+    localStorage.setItem(
+      "reservationDateRanget",
+      JSON.stringify(reservationDateRange)
+    );
+  }, [reservationDateRange]);
+
   function reserveHandler() {
     props.onReserve({ guests: guestsCount, dateRange: reservationDateRange });
   }

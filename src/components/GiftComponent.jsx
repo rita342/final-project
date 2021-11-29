@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Col, Container, Row, Image, Nav } from "react-bootstrap";
+import React from "react";
+import { Col, Container } from "react-bootstrap";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 const GiftComponent = () => {
