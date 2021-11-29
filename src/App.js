@@ -33,7 +33,7 @@ function App() {
               )}
             />
             <Route path="/favorite" exact component={Favorite} />
-            <Route path="/menu" exact component={Menu} />
+            <Route path="/Menu" exact component={Menu} />
 
             <Route path="/GiftComponent" exact component={GiftComponent} />
             <Route path="/details/:houseId" component={HouseDetails} />

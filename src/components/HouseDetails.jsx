@@ -8,7 +8,7 @@ import Reserve from "./Reserve";
 import Footer from "./Footer";
 import styles from "./HouseDetails.module.css";
 import { AiOutlineHome } from "react-icons/ai";
-import { BsKey, BsCart } from "react-icons/bs";
+import { BsKey } from "react-icons/bs";
 import { MdDateRange } from "react-icons/md";
 import { FavoriteContext } from "../store/Favorite";
 import { AiFillStar } from "react-icons/ai";

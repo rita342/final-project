@@ -39,7 +39,7 @@ function MyNavbar({ brand, history }) {
                 className="nav-link"
                 onClick={() => {
                   console.log("hello!");
-                  history.push("/menu");
+                  history.push("/Menu");
                 }}
                 style={{ cursor: "pointer" }}
               >

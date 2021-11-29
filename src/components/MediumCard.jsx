@@ -1,5 +1,4 @@
 import React from "react";
-import img41 from "../images/img41.jpg";
 import { Col, Container, Row, Image } from "react-bootstrap";
 import FooterHome from "./FooterHome";
 import { Link } from "react-router-dom";
@@ -44,7 +43,7 @@ const MediumCard = ({ history }) => {
             width=" 100%"
             height="100%"
             style={{
-              borderRadius: "5rem",
+              borderRadius: "2rem",
               boxShadow: "10px 14px 8px 10px rgba(1, 1, 1, 0.2)",
             }}
           />
