@@ -1,12 +1,16 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
 import Footer from "./Footer";
-function PaymentComponent() {
+
+const PaymentComponent = ({ price }) => {
+  const priceForStripe = price * 100;
+  const publishableKey =
+    "pk_test_51JzMv3Jjy2UsZKBIl9ahKEfyW32EkY5I91AXbEbULKYvo8NgbGuTtnHCDv3bUkHwY1tXlZpDB9cgCTi5LQV0InNc00VTPPbduj";
+
   const onToken = (token) => {
     console.log(token);
-    localStorage.setItem("token", JSON.stringify(token));
+    alert("your payment is successful!!");
   };
-
   return (
     <div style={{ marginTop: "3rem" }}>
       <div
@@ -47,12 +51,13 @@ function PaymentComponent() {
         }}
       >
         <StripeCheckout
-          stripeKey="pk_test_51JzMv3Jjy2UsZKBIl9ahKEfyW32EkY5I91AXbEbULKYvo8NgbGuTtnHCDv3bUkHwY1tXlZpDB9cgCTi5LQV0InNc00VTPPbduj"
-          name="Airbnb card"
-          amount={5000}
+          label="Pay Now"
+          billingAddress
+          shippingAddress
+          amount={priceForStripe}
+          panelLabel="Pay Now"
           token={onToken}
-          currency="USD"
-          description="christmass Gift"
+          stripeKey={publishableKey}
         />
       </div>
       <div></div>
@@ -61,6 +66,6 @@ function PaymentComponent() {
       </div>
     </div>
   );
-}
+};
 
 export default PaymentComponent;

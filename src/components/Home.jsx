@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CardComponent from "./CardComponent";
 import MediumCard from "./MediumCard";
 
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Container } from "react-bootstrap";
 import { useState } from "react";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
@@ -28,68 +28,105 @@ const Home = () => {
         <div
           style={{
             position: "absolute",
-            top: "10%",
-            alignItems: "center",
-            display: "flex",
-            justifyContent: "center",
             width: "100%",
+            height: "100%",
+            top: "0",
+            left: "0",
+            zIndex: "3",
+            background: "rgb(30 32 36 / 50%)",
           }}
         >
-          <Button
+          <div
+            classNme="where-you-move"
             style={{
-              background: "white",
-              color: "#3C99DC",
-              borderRadius: "3rem",
-              border: "1px solid #d3d3d3",
-              boxShadow: "0 3px 5px black",
-              fontSize: "20px",
-              fontWeight: "700",
-            }}
-            onClick={handleShow}
-          >
-            where are you going?
-          </Button>
+              position: "absolute",
+              top: "13%",
+              alignItems: "center",
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
 
-          <Modal
-            show={show}
-            onHide={handleClose}
-            animation={false}
-            style={{ marginTop: "10rem" }}
+              color: "white",
+            }}
           >
-            <Modal.Header closeButton>
-              <Modal.Title>Go anywhere anytime</Modal.Title>
-            </Modal.Header>
-            <h6 style={{ marginTop: "2rem", fontSize: "15px" }}>
-              GO ANWHERE, ANYTIME
-            </h6>
-            <div>
-              <Link to="/Menu/">
-                <button
-                  style={{
-                    width: "70%",
-                    marginTop: "1rem",
-                    borderRadius: "3rem",
-                    padding: "0.5rem",
-                    textAlign: "start",
-                    background: "white",
-                    border: "1px solid #d3d3d3",
-                    boxShadow: "0 3px 5px #ccc",
-                    color: "rgb(155, 12, 143)",
-                    fontSize: "20px",
-                    fontWeight: "700",
-                  }}
-                >
-                  i'am flexible
-                </button>
-              </Link>
-            </div>
-            <Modal.Footer>
-              <AiOutlineCloseCircle onClick={handleClose} />
-            </Modal.Footer>
-          </Modal>
+            <h1 style={{ color: "white" }}>
+              <span className="span"></span>
+            </h1>
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              top: "35%",
+              alignItems: "center",
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
+            }}
+          >
+            <Button
+              className="where-btn"
+              style={{
+                background: "transparent",
+                color: "pink",
+                borderRadius: "3rem",
+                border: "1px solid #d3d3d3",
+
+                fontSize: "20px",
+                fontWeight: "700",
+              }}
+              onClick={handleShow}
+            >
+              where are you going?
+            </Button>
+
+            <Modal
+              className="Home-modal"
+              show={show}
+              onHide={handleClose}
+              animation={false}
+              style={{ marginTop: "17rem" }}
+            >
+              <h6
+                style={{
+                  marginLeft: "2rem",
+                  fontSize: "11px",
+                  marginTop: "0.5rem",
+                }}
+              >
+                GO ANWHERE, ANYTIME
+              </h6>
+              <div>
+                <Link to="/Menu/">
+                  <button
+                    style={{
+                      width: "70%",
+                      marginTop: "0.5rem",
+                      borderRadius: "3rem",
+                      padding: "0.5rem",
+                      textAlign: "start",
+                      background: "white",
+                      border: "1px solid #d3d3d3",
+                      boxShadow: "0 3px 5px #ccc",
+                      color: "rgb(155, 12, 143)",
+                      fontSize: "20px",
+                      fontWeight: "700",
+                      marginLeft: "2rem",
+                    }}
+                  >
+                    i'am flexible
+                  </button>
+                </Link>
+              </div>
+              <h5>
+                <AiOutlineCloseCircle
+                  onClick={handleClose}
+                  style={{ float: "right", marginRight: "10px" }}
+                />
+              </h5>
+            </Modal>
+          </div>
         </div>
       </div>
-
       <div>
         <CardComponent />
       </div>
