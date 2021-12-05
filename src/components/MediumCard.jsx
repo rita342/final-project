@@ -44,7 +44,6 @@ const MediumCard = ({ history }) => {
             height="100%"
             style={{
               borderRadius: "2rem",
-              boxShadow: "10px 14px 8px 10px rgba(1, 1, 1, 0.2)",
             }}
           />
           <div>
@@ -89,6 +88,52 @@ const MediumCard = ({ history }) => {
                 shop now
               </button>
             </Link>
+          </div>
+          <h1
+            style={{
+              margin: "5rem",
+            }}
+          >
+            Discover Airbnb Experience
+          </h1>
+          <div
+            style={{
+              marginTop: "3rem",
+
+              position: "relative",
+            }}
+          >
+            <Image
+              src="https://a0.muscache.com/im/pictures/93ef1829-62d1-4349-8b4a-b02ebc650a25.jpg?im_w=2560&im_q=highq"
+              layout="fill"
+              width=" 100%"
+              height="100%"
+              style={{ borderRadius: "25px 25px  " }}
+            />
+            <h3
+              style={{
+                top: "14%",
+                left: "15%",
+                color: " white",
+                position: "absolute",
+              }}
+            >
+              Things to do on your trip
+            </h3>
+            <button
+              style={{
+                top: "25%",
+                left: "15%",
+                color: "black",
+                position: "absolute",
+                background: "white",
+                border: "1px solid white",
+                borderRadius: "0.3rem",
+                padding: "5px",
+              }}
+            >
+              Experiences
+            </button>
           </div>
         </div>
         <div style={{ marginTop: "5rem" }}>

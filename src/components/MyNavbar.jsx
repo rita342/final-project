@@ -12,10 +12,14 @@ function MyNavbar({ brand, history }) {
       <div className="screen">
         <Navbar
           collapseOnSelect
-          expand="md"
           bg="pink"
           variant="white"
-          style={{ height: "50px", background: "white", position: "static" }}
+          style={{
+            height: "50px",
+            background: "white",
+
+            width: "100%",
+          }}
         >
           <Link to="/">
             <h1 style={{ color: "#ff1493" }}>

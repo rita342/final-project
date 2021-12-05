@@ -1,77 +1,40 @@
-.tree-quote {
+.overlay {
   position: absolute;
-  top: 25%;
-  left: 20%;
-  color: white;
-  font-family: Lucida Handwriting, Brush Script MT, cursive;
-  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.where-btn :hover {
+  background-color: #e6007e;
+}
+.span::before {
+  content: "are you flexible?";
+  animation: animate infinite 10s;
+  padding-left: 10px;
   font-size: 25px;
+  color: rgb(247, 234, 247);
 }
 
+@keyframes animate {
+  0% {
+    content: "Not sure where to go? Perfect.";
+  }
+
+  50% {
+    content: "are you flexible?";
+  }
+
+  75% {
+    content: "Not sure where to go? Perfect.";
+  }
+}
 @media screen and (max-width: 600px) {
-  .tree-quote {
+  .span {
     display: none;
   }
 }
-body.active-modal {
-  overflow-y: hidden;
-}
-
-.btn-modal {
-  padding: 10px 20px;
-  display: block;
-  margin: 100px auto 0;
-  font-size: 18px;
-}
-
-.modal,
-.overlay {
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: fixed;
-}
-
-.overlay {
-  background: rgba(49, 49, 49, 0.8);
-}
-.modal-content {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  line-height: 1.4;
-  background: #f1f1f1;
-  padding: 14px 28px;
-  border-radius: 3px;
-  max-width: 600px;
-  min-width: 300px;
-}
-
-.close-modal {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 5px 7px;
-}
-.flexible-btn {
-  cursor: pointer;
-  position: absolute;
-  border: 1px solid white;
-  border-radius: 4rem;
-  font-size: 1rem;
-  padding: 0.5rem 0.5rem;
-  font-weight: 700;
-  color: rgb(155, 12, 143);
-  transform: translate(-50%, -50%);
-  box-shadow: 0 10px 10px rgb(36, 19, 35);
-  margin-top: -20%;
-  margin-left: 50%;
-}
-
 .small-card .card {
   border-radius: 20rem;
   box-shadow: 0 10px 10px rgb(36, 19, 35);
