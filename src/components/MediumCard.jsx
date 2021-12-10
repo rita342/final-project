@@ -77,7 +77,7 @@ const MediumCard = ({ history }) => {
                 style={{
                   marginTop: "-40%",
                   left: "33%",
-                  color: " #3C99DC",
+                  color: " black",
                   position: "absolute",
                   border: "1px solid #66D3FA",
                   borderRadius: "2rem",

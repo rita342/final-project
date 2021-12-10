@@ -1,22 +1,27 @@
-import { Col, Container, Row, Image } from "react-bootstrap";
+import { Col, Row, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { AiFillHeart } from "react-icons/ai";
+import { BsFillTreeFill } from "react-icons/bs";
+import { useHistory } from "react-router-dom";
 export default function HouseList({ items }) {
   const [searchTerm, setSearchTerm] = useState("");
+
+  const history = useHistory();
+  const params = new URLSearchParams(history.location.search);
+  const search = params.get("search");
+
+  console.log(params, search);
   return (
     <>
-      <Container style={{ marginTop: "3rem" }}>
-        <h1
-          style={{
-            marginLeft: "8rem",
-            fontFamily: "Ink Free",
-            color: " SaddleBrown",
-          }}
-        >
-          "Tree house are the ultimate return to nature"
-        </h1>
+      <hr />
+      <div
+        style={{
+          margin: "3rem",
+        }}
+      >
         <div style={{ marginTop: "4rem" }}>
+          {" "}
           <input
             type="text"
             placeholder="    search... "
@@ -28,6 +33,17 @@ export default function HouseList({ items }) {
               border: "1px solid grey",
             }}
           />
+          <span
+            style={{
+              marginLeft: "75%",
+              textDecoration: "underline",
+              textDecorationStyle: "solid",
+              fontWeight: "700",
+            }}
+          >
+            <BsFillTreeFill />
+            Houses
+          </span>
         </div>
 
         <Row id="search-result" style={{ flexWrap: "wrap", display: "flex" }}>
@@ -41,7 +57,7 @@ export default function HouseList({ items }) {
                 return val;
               }
             })
-            .map((val, key) => {
+            .map((val) => {
               return (
                 <Col xs={12} md={6} lg={6} xl={3} style={{ marginTop: "20px" }}>
                   <Link to={"/details/" + val.id}>
@@ -51,17 +67,18 @@ export default function HouseList({ items }) {
                       layout="fill"
                       style={{
                         width: "100%",
-                        height: "200px",
+                        height: "270px",
                         borderRadius: "20px",
                       }}
                     />
                     <AiFillHeart
+                      className="heart-icon"
                       style={{
                         position: "absolute",
                         marginTop: "10px",
                         marginLeft: "-35px",
                         color: "rgba(0,0,0,0.8)",
-                        fontSize: "18px",
+                        fontSize: "25px",
                       }}
                     />
                   </Link>
@@ -74,7 +91,7 @@ export default function HouseList({ items }) {
               );
             })}{" "}
         </Row>
-      </Container>
+      </div>
     </>
   );
 }

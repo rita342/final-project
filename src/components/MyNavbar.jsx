@@ -8,16 +8,14 @@ import { FaUserCircle } from "react-icons/fa";
 
 function MyNavbar({ brand, history }) {
   return (
-    <div className="flex-center">
-      <div className="screen">
+    <div className="flex">
+      <div className="">
         <Navbar
           collapseOnSelect
           bg="pink"
           variant="white"
           style={{
             height: "50px",
-            background: "white",
-
             width: "100%",
           }}
         >
@@ -26,19 +24,13 @@ function MyNavbar({ brand, history }) {
               {" "}
               <Navbar.Brand>
                 {brand}
-                <FaAirbnb style={{ fontSize: "25px", color: "#ff1493" }} />
+                <FaAirbnb style={{ fontSize: "30px", color: "#ff1493" }} />
               </Navbar.Brand>
             </h1>
           </Link>
-
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
-              <div
-                style={{ fontSize: "17px", color: "black", marginTop: "13px" }}
-              >
-                become a host
-              </div>
               <div
                 className="nav-link"
                 onClick={() => {
@@ -49,7 +41,7 @@ function MyNavbar({ brand, history }) {
               >
                 <MdOutlineHouseSiding
                   style={{
-                    fontSize: "17px",
+                    fontSize: "22px",
                     color: "black",
                     marginTop: "10px",
                   }}
@@ -60,7 +52,7 @@ function MyNavbar({ brand, history }) {
                 <div>
                   <BiGlobe
                     style={{
-                      fontSize: "17px",
+                      fontSize: "22px",
                       color: "black",
                       marginTop: "19px",
                     }}
@@ -71,9 +63,9 @@ function MyNavbar({ brand, history }) {
               <Nav.Link>
                 <FaUserCircle
                   style={{
-                    fontSize: "17px",
+                    fontSize: "22px",
                     color: "black",
-                    marginTop: "13px",
+                    marginTop: "10px",
                   }}
                 />
               </Nav.Link>

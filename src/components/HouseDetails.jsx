@@ -12,7 +12,7 @@ import { BsKey } from "react-icons/bs";
 import { MdDateRange } from "react-icons/md";
 import { FavoriteContext } from "../store/Favorite";
 import { AiFillStar } from "react-icons/ai";
-import { AiOutlineDelete, AiOutlineSave } from "react-icons/ai";
+import { AiFillHeart } from "react-icons/ai";
 const HouseDetails = ({ match }) => {
   const context = useContext(FavoriteContext);
 
@@ -64,7 +64,29 @@ const HouseDetails = ({ match }) => {
       ) : (
         <div className="screen">
           <div>
-            <h2 className={styles["house-title"]}>{houseItem.name}</h2>
+            <div style={{ display: "flex" }}>
+              <h2 className={styles["house-title"]}>{houseItem.name}</h2>
+              {context.isFavorite(houseItem) ? (
+                <AiFillHeart
+                  onClick={removeFavoriteHandler}
+                  style={{
+                    fontSize: "17px",
+                    fontWeight: "700px",
+                    marginLeft: "1rem",
+                  }}
+                />
+              ) : (
+                <AiFillHeart
+                  onClick={saveFavoriteHandler}
+                  style={{
+                    color: "rgb(143,121,0)",
+                    fontSize: "17px",
+                    fontWeight: "700",
+                    marginLeft: "1rem",
+                  }}
+                />
+              )}{" "}
+            </div>
             <div className={styles["house-actions-container"]}>
               <div className={styles["house-info"]}>
                 <Rating />
@@ -73,23 +95,7 @@ const HouseDetails = ({ match }) => {
                   {houseItem.country}
                 </span>
               </div>
-              <div className={styles["house-actions"]}>
-                {context.isFavorite(houseItem) ? (
-                  <AiOutlineDelete
-                    onClick={removeFavoriteHandler}
-                    style={{
-                      color: "red",
-                    }}
-                  />
-                ) : (
-                  <AiOutlineSave
-                    onClick={saveFavoriteHandler}
-                    style={{
-                      color: "blue",
-                    }}
-                  />
-                )}
-              </div>
+
               <hr />
             </div>
           </div>
