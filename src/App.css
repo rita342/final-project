@@ -5,6 +5,8 @@
   top: 0;
   left: 0;
   z-index: 1;
+  border-bottom-left-radius: 30% 30%;
+  border-bottom-right-radius: 30% 30%;
 }
 .where-btn :hover {
   background-color: #e6007e;
@@ -35,15 +37,17 @@
     display: none;
   }
 }
-.small-card .card {
+.small-card {
   border-radius: 20rem;
   box-shadow: 0 10px 10px rgb(36, 19, 35);
   margin: 1rem;
 }
-.small-card .card h5 {
-  color: purple;
-  font-family: Lucida Handwriting, Brush Script MT, cursive;
-  font-size: 13px;
+.small h5 {
+  color: rgb(22, 17, 22);
+  align-items: center;
+  font-size: 18px;
+  margin-top: 1rem;
+  margin-left: 6rem;
 }
 .medium-card .card {
   box-shadow: 0 10px 10px rgb(36, 19, 35);

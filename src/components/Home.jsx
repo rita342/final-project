@@ -1,21 +1,29 @@
-import React, { Component } from "react";
+import React from "react";
 import CardComponent from "./CardComponent";
 import MediumCard from "./MediumCard";
-
-import { Modal, Button, Container } from "react-bootstrap";
+import { Modal, Button, Container, Image, Row, Col } from "react-bootstrap";
 import { useState } from "react";
-import { AiOutlineCloseCircle } from "react-icons/ai";
-
+import items from "../data/menu.json";
+import { AiFillHeart } from "react-icons/ai";
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const Home = () => {
-  const [show, setShow] = useState(false);
+export default function Home() {
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const history = useHistory();
+  const params = new URLSearchParams(history.location.search);
+  const search = params.get("search");
+
+  console.log(params, search);
   return (
     <>
-      <div className="cover" style={{ position: "relative" }}>
+      <div
+        className="cover"
+        style={{
+          position: "relative",
+        }}
+      >
         <img
           src="http://www.ihis.info/wp-content/uploads/2018/07/tree-house-resort-nice-on-home-intended-treehouse-american-21.jpg"
           layout="fill"
@@ -23,6 +31,8 @@ const Home = () => {
           style={{
             backgroundRepeat: "no-repeat",
             width: "100%",
+            borderBottomLeftRadius: "30% 30% ",
+            borderBottomRightRadius: "30% 30%",
           }}
         />
         <div
@@ -34,6 +44,8 @@ const Home = () => {
             left: "0",
             zIndex: "3",
             background: "rgb(30 32 36 / 50%)",
+            borderBottomLeftRadius: "30% 30% ",
+            borderBottomRightRadius: "30% 30%",
           }}
         >
           <div
@@ -56,74 +68,52 @@ const Home = () => {
           <div
             style={{
               position: "absolute",
-              top: "35%",
+              top: "25%",
               alignItems: "center",
               display: "flex",
               justifyContent: "center",
               width: "100%",
             }}
           >
-            <Button
-              className="where-btn"
-              style={{
-                background: "transparent",
-                color: "pink",
-                borderRadius: "3rem",
-                border: "1px solid #d3d3d3",
-
-                fontSize: "20px",
-                fontWeight: "700",
+            <input
+              type="text"
+              placeholder="    search... "
+              onChange={(event) => {
+                setSearchTerm(event.target.value);
               }}
-              onClick={handleShow}
-            >
-              where are you going?
-            </Button>
-
-            <Modal
-              className="Home-modal"
-              show={show}
-              onHide={handleClose}
-              animation={false}
-              style={{ marginTop: "17rem" }}
-            >
-              <h6
+              style={{
+                borderRadius: "30px",
+                border: "1px solid grey",
+                width: "40%",
+              }}
+            />
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              top: "45%",
+              alignItems: "center",
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
+            }}
+          >
+            <Link to="/Menu/">
+              <Button
+                className="where-btn"
                 style={{
-                  marginLeft: "2rem",
-                  fontSize: "11px",
-                  marginTop: "0.5rem",
+                  background: "transparent",
+                  color: "pink",
+                  borderRadius: "3rem",
+                  border: "1px solid #d3d3d3",
+                  top: "40%",
+                  fontSize: "20px",
+                  fontWeight: "700",
                 }}
               >
-                GO ANWHERE, ANYTIME
-              </h6>
-              <div>
-                <Link to="/Menu/">
-                  <button
-                    style={{
-                      width: "70%",
-                      marginTop: "0.5rem",
-                      borderRadius: "3rem",
-                      padding: "0.5rem",
-                      textAlign: "start",
-                      background: "white",
-                      border: "1px solid #d3d3d3",
-                      boxShadow: "0 3px 5px #ccc",
-                      color: "rgb(155, 12, 143)",
-                      fontSize: "20px",
-                      fontWeight: "700",
-                      marginLeft: "2rem",
-                    }}
-                  >
-                    i'am flexible
-                  </button>
-                </Link>
-              </div>
-              <h5>
-                <AiOutlineCloseCircle
-                  onClick={handleClose}
-                  style={{ float: "right", marginRight: "10px" }}
-                />
-              </h5>
-            </Modal>
+                where are you going?
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -135,6 +125,4 @@ const Home = () => {
       </div>
     </>
   );
-};
-
-export default Home;
+}
