@@ -2,20 +2,21 @@ import React from "react";
 import CardComponent from "./CardComponent";
 import MediumCard from "./MediumCard";
 import { Modal, Button, Container, Image, Row, Col } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import items from "../data/menu.json";
 import { AiFillHeart } from "react-icons/ai";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { addSearchTermAction, GET_SEARCH_TERM } from "../redux/actions";
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
+  const dispatch = useDispatch();
 
-  const history = useHistory();
-  const params = new URLSearchParams(history.location.search);
-  const search = params.get("search");
+  useEffect(() => {
+    dispatch(addSearchTermAction(searchTerm));
+  }, [searchTerm]);
 
-  console.log(params, search);
   return (
     <>
       <div
