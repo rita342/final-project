@@ -1,17 +1,19 @@
 import { Col, Row, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiFillHeart } from "react-icons/ai";
 import { BsFillTreeFill } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 export default function HouseList({ items }) {
   const [searchTerm, setSearchTerm] = useState("");
+  const state = useSelector((state) => state.searchInput);
+  console.log("check state plz:", state.value);
 
-  const history = useHistory();
-  const params = new URLSearchParams(history.location.search);
-  const search = params.get("search");
+  useEffect(() => {
+    setSearchTerm(state.value);
+  }, [state]);
 
-  console.log(params, search);
   return (
     <>
       <hr />
@@ -22,17 +24,6 @@ export default function HouseList({ items }) {
       >
         <div style={{ marginTop: "4rem" }}>
           {" "}
-          <input
-            type="text"
-            placeholder="    search... "
-            onChange={(event) => {
-              setSearchTerm(event.target.value);
-            }}
-            style={{
-              borderRadius: "30px",
-              border: "1px solid grey",
-            }}
-          />
           <span
             style={{
               marginLeft: "75%",
