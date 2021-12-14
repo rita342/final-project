@@ -1,13 +1,12 @@
 import React from "react";
 import CardComponent from "./CardComponent";
 import MediumCard from "./MediumCard";
-import { Modal, Button, Container, Image, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import items from "../data/menu.json";
-import { AiFillHeart } from "react-icons/ai";
-import { useHistory } from "react-router-dom";
+import { BsFillHouseFill } from "react-icons/bs";
+import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { Button } from "react-bootstrap";
 import { addSearchTermAction, GET_SEARCH_TERM } from "../redux/actions";
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -26,14 +25,14 @@ export default function Home() {
         }}
       >
         <img
-          src="http://www.ihis.info/wp-content/uploads/2018/07/tree-house-resort-nice-on-home-intended-treehouse-american-21.jpg"
+          src="https://www.bejot.eu/assets/photo/upload/content/gallery/709/xkorzen-design-paris-1-smart-1920-1080.jpeg.pagespeed.ic.dcgeKjwrup.jpg"
           layout="fill"
           objectFit="cover"
           style={{
             backgroundRepeat: "no-repeat",
             width: "100%",
-            borderBottomLeftRadius: "30% 30% ",
-            borderBottomRightRadius: "30% 30%",
+            borderBottomLeftRadius: "100% 100% ",
+            borderBottomRightRadius: "100% 100%",
           }}
         />
         <div
@@ -45,8 +44,8 @@ export default function Home() {
             left: "0",
             zIndex: "3",
             background: "rgb(30 32 36 / 50%)",
-            borderBottomLeftRadius: "30% 30% ",
-            borderBottomRightRadius: "30% 30%",
+            borderBottomLeftRadius: "100% 100% ",
+            borderBottomRightRadius: "100% 100%",
           }}
         >
           <div
@@ -76,45 +75,65 @@ export default function Home() {
               width: "100%",
             }}
           >
-            <input
-              type="text"
-              placeholder="    search... "
-              onChange={(event) => {
-                setSearchTerm(event.target.value);
-              }}
+            <div
               style={{
-                borderRadius: "30px",
-                border: "1px solid grey",
-                width: "40%",
+                position: "absolute",
+                marginTop: "5rem",
+                alignItems: "center",
+                display: "flex",
+                justifyContent: "center",
+                width: "100%",
               }}
-            />
-          </div>
-          <div
-            style={{
-              position: "absolute",
-              top: "45%",
-              alignItems: "center",
-              display: "flex",
-              justifyContent: "center",
-              width: "100%",
-            }}
-          >
-            <Link to="/Menu/">
-              <Button
-                className="where-btn"
-                style={{
-                  background: "transparent",
-                  color: "pink",
-                  borderRadius: "3rem",
-                  border: "1px solid #d3d3d3",
-                  top: "40%",
-                  fontSize: "20px",
-                  fontWeight: "700",
-                }}
-              >
-                where are you going?
-              </Button>
-            </Link>
+            >
+              <form class="example" action="action_page.php">
+                <input
+                  type="text"
+                  placeholder="Search your Country..."
+                  name="search"
+                  onChange={(event) => {
+                    setSearchTerm(event.target.value);
+                  }}
+                  style={{
+                    borderRadius: "23px",
+                    border: "1px solid white",
+                    padding: "9px ",
+                    width: "20rem",
+                  }}
+                />
+                <Link to="/Menu/">
+                  <Button
+                    type="submit"
+                    style={{
+                      borderRadius: "40px",
+                      background: "#ff1493",
+                      marginLeft: "-11%",
+                      border: "1px solid #ff1493",
+                    }}
+                  >
+                    <FiSearch
+                      style={{
+                        color: "white",
+                      }}
+                    />
+                  </Button>
+                </Link>
+              </form>
+            </div>
+            <div
+              style={{
+                position: "absolute",
+                marginTop: "20rem",
+                alignItems: "center",
+                display: "flex",
+                justifyContent: "center",
+                width: "100%",
+                fontSize: "6rem",
+                color: "Plum",
+              }}
+            >
+              {" "}
+              <BsFillHouseFill />
+            </div>
           </div>
         </div>
       </div>

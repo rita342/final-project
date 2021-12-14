@@ -13,9 +13,9 @@
 }
 .span::before {
   content: "are you flexible?";
-  animation: animate infinite 10s;
+  animation: animate infinite 5s;
   padding-left: 10px;
-  font-size: 25px;
+  font-size: 30px;
   color: rgb(247, 234, 247);
 }
 

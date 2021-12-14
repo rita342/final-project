@@ -1,4 +1,4 @@
-import { Col, Row, Image } from "react-bootstrap";
+import { Col, Row, Image, Figure } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AiFillHeart } from "react-icons/ai";
@@ -16,27 +16,36 @@ export default function HouseList({ items }) {
 
   return (
     <>
-      <hr />
+      <div
+        className="banner"
+        style={{
+          background: "#F8B195",
+          height: "6rem",
+          boxShadow: "0 5px 5px rgb(36, 19, 35)",
+        }}
+      >
+        <div
+          className="banner-text"
+          style={{
+            alignItems: "center",
+            justifyContent: "center",
+            display: "flex",
+            paddingTop: "1rem",
+          }}
+        >
+          <BsFillTreeFill style={{ fontSize: "3rem" }} />
+          <span style={{ color: "white", fontWeight: "700" }}>House </span>
+          <span style={{ fontSize: "2rem", marginLeft: "1rem" }}>
+            Find your city, ideal destination!!
+          </span>
+        </div>
+      </div>
+
       <div
         style={{
           margin: "3rem",
         }}
       >
-        <div style={{ marginTop: "4rem" }}>
-          {" "}
-          <span
-            style={{
-              marginLeft: "75%",
-              textDecoration: "underline",
-              textDecorationStyle: "solid",
-              fontWeight: "700",
-            }}
-          >
-            <BsFillTreeFill />
-            Houses
-          </span>
-        </div>
-
         <Row id="search-result" style={{ flexWrap: "wrap", display: "flex" }}>
           {items
             .filter((val) => {

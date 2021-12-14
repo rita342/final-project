@@ -3,8 +3,7 @@ import { MdOutlineHouseSiding } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import { FaAirbnb } from "react-icons/fa";
-import { BiGlobe } from "react-icons/bi";
-import { FaUserCircle } from "react-icons/fa";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 function MyNavbar({ brand, history }) {
   return (
@@ -50,25 +49,28 @@ function MyNavbar({ brand, history }) {
 
               <Link to="/favorite">
                 <div>
-                  <BiGlobe
+                  <AiFillHeart
                     style={{
-                      fontSize: "22px",
+                      fontSize: "17px",
+
+                      marginTop: "20px",
                       color: "black",
-                      marginTop: "19px",
                     }}
-                  />{" "}
+                  />
                 </div>
               </Link>
 
-              <Nav.Link>
-                <FaUserCircle
+              <Link to="/AboutComponent">
+                <div
                   style={{
-                    fontSize: "22px",
+                    fontSize: "17px",
                     color: "black",
-                    marginTop: "10px",
+                    marginTop: "17px",
+                    marginLeft: "5px",
+                    fontWeight: "700",
                   }}
-                />
-              </Nav.Link>
+                ></div>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

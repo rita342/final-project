@@ -12,59 +12,60 @@ const PaymentComponent = ({ price }) => {
     alert("your payment is successful!!");
   };
   return (
-    <div style={{ marginTop: "3rem" }}>
-      <div
+    <>
+      <hr
         style={{
-          alignItems: "center",
-          display: "flex",
-          justifyContent: "center",
+          boxShadow: "2px 2px 2px rgb(gray)",
+          height: "2px",
         }}
-      >
-        <div>
-          <h3
-            style={{
-              color: "#66D3FA",
-            }}
-          >
-            Airbnb Gift Card
-          </h3>
-          <h6
-            style={{
-              color: "black",
-            }}
-          >
-            Amount :50$
-          </h6>
-        </div>
-        <img
-          src="https://a0.muscache.com/im/pictures/b3275f8d-4341-4800-bdf2-04be20e9112d.jpg?im_w=480"
-          width="30%"
-          style={{}}
-        />
-      </div>
+      />
 
-      <div
-        style={{
-          alignItems: "center",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <StripeCheckout
-          label="Pay Now"
-          billingAddress
-          shippingAddress
-          amount={priceForStripe}
-          panelLabel="Pay Now"
-          token={onToken}
-          stripeKey={publishableKey}
-        />
+      <div style={{ marginTop: "3rem" }}>
+        <div
+          style={{
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <div>
+            <h3
+              style={{
+                color: "#66D3FA",
+              }}
+            >
+              Airbnb Gift Card
+            </h3>
+            <h6
+              style={{
+                color: "black",
+              }}
+            >
+              Amount :50$
+            </h6>
+            <StripeCheckout
+              label="Pay Now"
+              billingAddress
+              shippingAddress
+              amount={priceForStripe}
+              panelLabel="Pay Now"
+              token={onToken}
+              stripeKey={publishableKey}
+            />
+          </div>
+          <img
+            src="https://a0.muscache.com/im/pictures/b3275f8d-4341-4800-bdf2-04be20e9112d.jpg?im_w=480"
+            width="30%"
+            style={{ marginLeft: "2rem" }}
+          />
+        </div>
+
+        <div></div>
+        <div>
+          <Footer />
+        </div>
       </div>
-      <div></div>
-      <div>
-        <Footer />
-      </div>
-    </div>
+    </>
   );
 };
 
