@@ -13,7 +13,7 @@ import PaymentComponent from "./components/PaymentComponent";
 import "./App.css";
 import FavoriteProvider from "./store/Favorite";
 import Favorite from "./components/Favorite";
-
+import AboutComponent from "./components/AboutComponent";
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -44,6 +44,7 @@ function App() {
 
             <Route path="/GiftComponent" exact component={GiftComponent} />
             <Route path="/details/:houseId" component={HouseDetails} />
+            <Route path="/AboutComponent" exact component={AboutComponent} />
             <Route
               path="/PaymentComponent"
               exact

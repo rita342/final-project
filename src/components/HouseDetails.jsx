@@ -12,7 +12,7 @@ import { BsKey } from "react-icons/bs";
 import { MdDateRange } from "react-icons/md";
 import { FavoriteContext } from "../store/Favorite";
 import { AiFillStar } from "react-icons/ai";
-import { AiFillHeart } from "react-icons/ai";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 const HouseDetails = ({ match }) => {
   const context = useContext(FavoriteContext);
 
@@ -52,11 +52,9 @@ const HouseDetails = ({ match }) => {
           onConfirm={confirmHandler}
           onCancel={cancelHandler}
         >
-          <ul>
-            <li>Number of adult guests: {reservatonData.guests.adult}</li>
-            <li>Number of child guests: {reservatonData.guests.children}</li>
-            <li>Number of infant guests: {reservatonData.guests.infant}</li>
-          </ul>
+          <div>Number of adult guests: {reservatonData.guests.adult}</div>
+          <div>Number of child guests: {reservatonData.guests.children}</div>
+          <div>Number of infant guests: {reservatonData.guests.infant}</div>
         </Modal>
       )}
       {!houseItem ? (
@@ -73,19 +71,20 @@ const HouseDetails = ({ match }) => {
                     fontSize: "17px",
                     fontWeight: "700px",
                     marginLeft: "1rem",
+                    color: "rgb(143,121,0)",
                   }}
                 />
               ) : (
-                <AiFillHeart
+                <AiOutlineHeart
                   onClick={saveFavoriteHandler}
                   style={{
-                    color: "rgb(143,121,0)",
                     fontSize: "17px",
                     fontWeight: "700",
                     marginLeft: "1rem",
                   }}
                 />
               )}{" "}
+              <h2 className={styles["house-title"]}> save</h2>
             </div>
             <div className={styles["house-actions-container"]}>
               <div className={styles["house-info"]}>
@@ -115,17 +114,18 @@ const HouseDetails = ({ match }) => {
           <hr style={{ marginRight: "25rem" }} />
           <div className="room-num" style={{ marginTop: "2rem" }}>
             <div>
-              <ul>
-                <li>
-                  <AiOutlineHome /> {""}Entire home
-                </li>
-                <li>
-                  <BsKey /> {""}Great check-in experiance
-                </li>
-                <li>
-                  <MdDateRange /> {""}Free cancellation before jan 4
-                </li>
-              </ul>
+              <div>
+                {" "}
+                <AiOutlineHome /> {""}Entire home
+              </div>
+              <div>
+                {" "}
+                <BsKey /> {""}Great check-in experiance
+              </div>
+              <div>
+                {" "}
+                <MdDateRange /> {""}Free cancellation before jan 4
+              </div>
             </div>
             <span></span>
           </div>
