@@ -3,75 +3,73 @@ import { MdOutlineHouseSiding } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import { FaAirbnb } from "react-icons/fa";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { AiFillHeart } from "react-icons/ai";
+import TotalHouseList from "./TotalHouseList";
+import { BsFillTreeFill } from "react-icons/bs";
 
 function MyNavbar({ brand, history }) {
   return (
     <div className="flex">
       <div className="">
-        <Navbar
-          collapseOnSelect
-          bg="pink"
-          variant="white"
-          style={{
-            height: "50px",
-            width: "100%",
-          }}
-        >
+        <Navbar bg="light" expand="lg" style={{ height: "40px" }}>
           <Link to="/">
-            <h1 style={{ color: "#ff1493" }}>
+            {" "}
+            <Navbar.Brand href="#">
               {" "}
-              <Navbar.Brand>
-                {brand}
-                <FaAirbnb style={{ fontSize: "30px", color: "#ff1493" }} />
-              </Navbar.Brand>
-            </h1>
-          </Link>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ml-auto">
-              <div
-                className="nav-link"
-                onClick={() => {
-                  console.log("hello!");
-                  history.push("/Menu");
+              <BsFillTreeFill
+                style={{
+                  fontSize: "2rem",
+                  color: "#26580F",
                 }}
-                style={{ cursor: "pointer" }}
-              >
+              />
+            </Navbar.Brand>{" "}
+          </Link>
+          <Navbar.Brand href="#">
+            {" "}
+            <h1
+              style={{
+                color: "#985321",
+                fontFamily: "cursive",
+                fontSize: "18px",
+                marginLeft: "-1.5rem",
+                fontWeight: "900",
+              }}
+            >
+              {" "}
+              Treehouse
+            </h1>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="mr-auto my-2 my-lg-0"
+              style={{ maxHeight: "100px" }}
+              navbarScroll
+            ></Nav>
+            <Link to="/TotalHouseList">
+              {" "}
+              <Nav.Link className="d-flex" href="#" disabled>
+                {" "}
                 <MdOutlineHouseSiding
                   style={{
-                    fontSize: "22px",
-                    color: "black",
-                    marginTop: "10px",
+                    fontSize: "25px",
+                    color: "#985321",
                   }}
                 />
-              </div>
-
-              <Link to="/favorite">
-                <div>
-                  <AiFillHeart
-                    style={{
-                      fontSize: "17px",
-
-                      marginTop: "20px",
-                      color: "black",
-                    }}
-                  />
-                </div>
-              </Link>
-
-              <Link to="/AboutComponent">
-                <div
+              </Nav.Link>
+            </Link>
+            <Link to="/favorite">
+              {" "}
+              <Nav.Link className="d-flex" href="#" disabled>
+                <AiFillHeart
                   style={{
-                    fontSize: "17px",
-                    color: "black",
-                    marginTop: "17px",
-                    marginLeft: "5px",
-                    fontWeight: "700",
+                    fontSize: "25px",
+
+                    color: "#985321",
                   }}
-                ></div>
-              </Link>
-            </Nav>
+                />
+              </Nav.Link>{" "}
+            </Link>
           </Navbar.Collapse>
         </Navbar>
       </div>

@@ -1,97 +1,113 @@
-import { Col, Row, Image, Figure } from "react-bootstrap";
+import { Col, Row, Image, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AiFillHeart } from "react-icons/ai";
 import { BsFillTreeFill } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 export default function HouseList({ items }) {
   const [searchTerm, setSearchTerm] = useState("");
   const state = useSelector((state) => state.searchInput);
   console.log("check state plz:", state.value);
-
   useEffect(() => {
     setSearchTerm(state.value);
+    // const query = new URLSearchParams(window.location.setSearchTerm);
+    const query = new URLSearchParams(window.location.Search);
+    const country = query.get("country");
+    console.log(country);
   }, [state]);
 
+  // const { search } = useLocation();
+  // const searchParams = new URLSearchParams(window.location.setSearchTerm);
+  // const input = searchParams.get("input");
+  // console.log(input);
   return (
     <>
-      <div
-        className="banner"
-        style={{
-          background: "#F8B195",
-          height: "6rem",
-          boxShadow: "0 5px 5px rgb(36, 19, 35)",
-        }}
+      <Row
+        id="search-result"
+        style={{ flexWrap: "wrap", display: "flex", bachground: "grey" }}
       >
-        <div
-          className="banner-text"
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            display: "flex",
-            paddingTop: "1rem",
-          }}
-        >
-          <BsFillTreeFill style={{ fontSize: "3rem" }} />
-          <span style={{ color: "white", fontWeight: "700" }}>House </span>
-          <span style={{ fontSize: "2rem", marginLeft: "1rem" }}>
-            Find your city, ideal destination!!
-          </span>
-        </div>
-      </div>
-
-      <div
-        style={{
-          margin: "3rem",
-        }}
-      >
-        <Row id="search-result" style={{ flexWrap: "wrap", display: "flex" }}>
-          {items
-            .filter((val) => {
-              if (searchTerm == "") {
-                return val;
-              } else if (
-                val.country.toLowerCase().includes(searchTerm.toLowerCase())
-              ) {
-                return val;
-              }
-            })
-            .map((val) => {
-              return (
-                <Col xs={12} md={6} lg={6} xl={3} style={{ marginTop: "20px" }}>
-                  <Link to={"/details/" + val.id}>
-                    {" "}
-                    <Image
-                      src={val.img}
-                      layout="fill"
-                      style={{
-                        width: "100%",
-                        height: "270px",
-                        borderRadius: "20px",
-                      }}
-                    />
-                    <AiFillHeart
-                      className="heart-icon"
-                      style={{
-                        position: "absolute",
-                        marginTop: "10px",
-                        marginLeft: "-35px",
-                        color: "rgba(0,0,0,0.8)",
-                        fontSize: "25px",
-                      }}
-                    />
-                  </Link>
-                  <div style={{ marginTop: "5px" }}>
-                    <p style={{ fontSize: "12px" }}>
-                      {val.country}: {val.name} price: {val.price}$
-                    </p>
+        {items
+          .filter((val) => {
+            if (searchTerm == "") {
+              return val;
+            } else if (
+              val.country.toLowerCase().includes(searchTerm.toLowerCase())
+            ) {
+              return val;
+            }
+          })
+          .map((val) => {
+            return (
+              <>
+                {" "}
+                <Container
+                  style={{
+                    margin: "3rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <div
+                    className="card"
+                    id="search-result"
+                    style={{
+                      width: "700px",
+                      height: "400px",
+                      background: "#b2dfdb",
+                      boxShadow: "  0 4px 8px 4px rgba(0,0,0,0.2)",
+                    }}
+                  >
+                    <Row>
+                      <Col>
+                        <div>
+                          <Link to={"/details/" + val.id}>
+                            {" "}
+                            <Image
+                              src={val.img}
+                              layout="fill"
+                              style={{
+                                width: "400px",
+                                height: "270px",
+                              }}
+                            />{" "}
+                          </Link>
+                        </div>
+                      </Col>
+                      <Col>
+                        {" "}
+                        <div style={{ marginTop: "3rem" }}>
+                          <p
+                            style={{
+                              fontSize: "20px",
+                              fontWeight: "900",
+                              color: "#66350F",
+                            }}
+                          >
+                            {val.country}
+                          </p>
+                          <h6>price: {val.price}$</h6>
+                          <h6
+                            style={{
+                              fontSize: "13px",
+                            }}
+                          >
+                            Name: {val.name}
+                          </h6>
+                        </div>
+                      </Col>
+                    </Row>
                   </div>
-                </Col>
-              );
-            })}{" "}
-        </Row>
-      </div>
+                </Container>
+              </>
+            );
+
+            {
+            }
+          })}{" "}
+      </Row>{" "}
     </>
   );
 }
