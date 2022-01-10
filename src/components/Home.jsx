@@ -25,12 +25,13 @@ export default function Home() {
         }}
       >
         <img
-          src="https://www.bejot.eu/assets/photo/upload/content/gallery/709/xkorzen-design-paris-1-smart-1920-1080.jpeg.pagespeed.ic.dcgeKjwrup.jpg"
+          src="https://treehousevineyards.com/images/hero/homeHero.jpg?nf_resize=fit&w=1440"
           layout="fill"
           objectFit="cover"
           style={{
             backgroundRepeat: "no-repeat",
             width: "100%",
+            height: "100%",
             borderBottomLeftRadius: "100% 100% ",
             borderBottomRightRadius: "100% 100%",
           }}
@@ -42,8 +43,11 @@ export default function Home() {
             height: "100%",
             top: "0",
             left: "0",
-            zIndex: "3",
-            background: "rgb(30 32 36 / 50%)",
+
+            // "linear-gradient(0deg, #f3ec78, #af4261)",
+            background:
+              "linear-gradient( 2deg, rgb(0 0 0 / 0%), rgb(6 6 6 / 74%))",
+            //  background: "rgb(10 32 6 / 20%)",
             borderBottomLeftRadius: "100% 100% ",
             borderBottomRightRadius: "100% 100%",
           }}
@@ -75,17 +79,8 @@ export default function Home() {
               width: "100%",
             }}
           >
-            <div
-              style={{
-                position: "absolute",
-                marginTop: "5rem",
-                alignItems: "center",
-                display: "flex",
-                justifyContent: "center",
-                width: "100%",
-              }}
-            >
-              <form class="example" action="action_page.php">
+            <div>
+              <form>
                 <input
                   type="text"
                   placeholder="Search your Country..."
@@ -94,28 +89,41 @@ export default function Home() {
                     setSearchTerm(event.target.value);
                   }}
                   style={{
-                    borderRadius: "23px",
-                    border: "1px solid white",
-                    padding: "9px ",
-                    width: "20rem",
+                    position: "relative",
+                    display: "inline-block",
+                    fontSize: "20px",
+                    boxSizing: "border-box",
+                    transition: ".5s",
+                    width: "340px",
+                    background: "#fff",
+                    height: "50px",
+                    border: "none",
+                    outline: "none",
+                    padding: "0 25px",
+                    borderRadius: "25px 0 0 25px",
                   }}
                 />
-                <Link to="/Menu/">
-                  <Button
+                {/* `search/?country${countryVariable}&city=${cityVariable}` or "search/?country=" + countryVariable + "&city=" + cityVariable*/}
+                <Link to={`/Search/?country=${searchTerm}`}>
+                  <input
                     type="submit"
                     style={{
-                      borderRadius: "40px",
-                      background: "#ff1493",
-                      marginLeft: "-11%",
-                      border: "1px solid #ff1493",
+                      position: "relative",
+                      display: "inline-block",
+                      fontSize: "20px",
+                      boxSizing: "border-box",
+                      transition: ".5s",
+                      borderRadius: "0 25px 25px 0",
+                      width: "150px",
+                      height: "50px",
+                      outline: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      background: "#985321",
+                      color: "#fff",
+                      left: "-5px",
                     }}
-                  >
-                    <FiSearch
-                      style={{
-                        color: "white",
-                      }}
-                    />
-                  </Button>
+                  />
                 </Link>
               </form>
             </div>
@@ -128,11 +136,10 @@ export default function Home() {
                 justifyContent: "center",
                 width: "100%",
                 fontSize: "6rem",
-                color: "Plum",
+                color: "linear-gradient(to bottom right,pink, purple)",
               }}
             >
               {" "}
-              <BsFillHouseFill />
             </div>
           </div>
         </div>

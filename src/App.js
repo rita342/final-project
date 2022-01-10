@@ -1,11 +1,10 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MyNavbar from "./components/MyNavbar";
-
 import Home from "./components/Home";
 import { useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import Menu from "./components/Menu";
+import Search from "./components/Search";
 import GiftComponent from "./components/GiftComponent";
 import { Switch } from "react-router";
 import HouseDetails from "./components/HouseDetails";
@@ -14,9 +13,8 @@ import "./App.css";
 import FavoriteProvider from "./store/Favorite";
 import Favorite from "./components/Favorite";
 import AboutComponent from "./components/AboutComponent";
+import TotalHouseList from "./components/TotalHouseList";
 function App() {
-  const [searchTerm, setSearchTerm] = useState("");
-
   return (
     <div>
       <FavoriteProvider>
@@ -35,7 +33,8 @@ function App() {
               )}
             />
             <Route path="/favorite" exact component={Favorite} />
-            <Route path="/Menu" exact component={Menu} />
+            <Route path="/Search" exact component={Search} />
+            <Route path="/TotalHouseList" exact component={TotalHouseList} />
             {/*  <Route
               path="/Menu"
               exact

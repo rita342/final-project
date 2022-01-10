@@ -1,13 +1,3 @@
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  border-bottom-left-radius: 30% 30%;
-  border-bottom-right-radius: 30% 30%;
-}
 .where-btn :hover {
   background-color: #e6007e;
 }
@@ -295,4 +285,7 @@ nav.user-button {
 }
 #CardComponent {
   background: black;
+}
+#search-result {
+  width: 100%;
 }

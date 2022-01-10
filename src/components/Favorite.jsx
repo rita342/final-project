@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { FavoriteContext } from "../store/Favorite";
 import HouseList from "./HouseList";
+import Reserve from "./Reserve";
 import Footer from "./Footer";
 
 export default function Favorite() {
@@ -15,7 +16,7 @@ export default function Favorite() {
       />
       <div>
         {context.favorites.length ? (
-          <HouseList items={context.favorites}></HouseList>
+          <HouseList items={context.favorites}> </HouseList>
         ) : (
           <div className="empty-box">
             {" "}

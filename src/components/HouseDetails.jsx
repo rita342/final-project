@@ -68,19 +68,21 @@ const HouseDetails = ({ match }) => {
                 <AiFillHeart
                   onClick={removeFavoriteHandler}
                   style={{
-                    fontSize: "17px",
+                    fontSize: "2rem",
                     fontWeight: "700px",
                     marginLeft: "1rem",
-                    color: "rgb(143,121,0)",
+                    color: "#ff1493",
+                    marginTop: "-5px",
                   }}
                 />
               ) : (
                 <AiOutlineHeart
                   onClick={saveFavoriteHandler}
                   style={{
-                    fontSize: "17px",
+                    fontSize: "2rem",
                     fontWeight: "700",
                     marginLeft: "1rem",
+                    marginTop: "-5px",
                   }}
                 />
               )}{" "}

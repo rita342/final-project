@@ -40,10 +40,10 @@ const MediumCard = ({ history }) => {
           }}
         >
           <Image
-            src="https://a0.muscache.com/im/pictures/9196e84a-47e1-4fd2-8a6d-dc9face35440.jpg?im_w=1680"
+            src="https://media.istockphoto.com/photos/enchanting-fairy-tree-home-inside-an-old-white-oak-picture-id1186784465?k=6&m=1186784465&s=612x612&w=0&h=33bLBtQXo880R8q1-E334yy2uaDi3K5NH_TKrnJ3gwA="
             layout="fill"
-            width=" 100%"
-            height="100%"
+            width="800px"
+            height="450px"
             style={{
               borderRadius: "2rem",
             }}
