@@ -6,22 +6,21 @@ import { BsFillTreeFill } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 export default function HouseList({ items }) {
   const [searchTerm, setSearchTerm] = useState("");
-  const state = useSelector((state) => state.searchInput);
-  console.log("check state plz:", state.value);
-  useEffect(() => {
-    setSearchTerm(state.value);
-    // const query = new URLSearchParams(window.location.setSearchTerm);
-    const query = new URLSearchParams(window.location.Search);
-    const country = query.get("country");
-    console.log(country);
-  }, [state]);
+  // const location = useLocation();
+  // const state = useSelector((state) => state.searchInput);
+  //console.log("check state plz:", state.value);
+  // useEffect(() => {
+  // setSearchTerm(state.value);
+  // const query = new URLSearchParams(window.location.setSearchTerm);
+  const query = new URLSearchParams(window.location.Search);
+  const country = query.get("country");
+  console.log(country);
+  // }, [state]);
 
-  // const { search } = useLocation();
-  // const searchParams = new URLSearchParams(window.location.setSearchTerm);
-  // const input = searchParams.get("input");
-  // console.log(input);
+  //
   return (
     <>
       <Row
