@@ -1,31 +1,22 @@
 import React from "react";
-import { Col, Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-const GiftComponent = () => {
+import { BsFillTreeFill } from "react-icons/bs";
+import StripeCheckout from "react-stripe-checkout";
+
+const GiftComponent = ({ price }) => {
+  const priceForStripe = price * 100;
+  const publishableKey =
+    "pk_test_51JzMv3Jjy2UsZKBIl9ahKEfyW32EkY5I91AXbEbULKYvo8NgbGuTtnHCDv3bUkHwY1tXlZpDB9cgCTi5LQV0InNc00VTPPbduj";
+
+  const onToken = (token) => {
+    console.log(token);
+    alert("your payment is successful!!");
+  };
   return (
     <>
-      <hr
-        style={{
-          boxShadow: "2px 2px 2px rgb(gray)",
-          height: "2px",
-        }}
-      />
-
-      <Link to="/PaymentComponent/">
-        <button
-          style={{
-            float: "right",
-            color: "white",
-            background: "#ff69b4",
-            borderRadius: "4rem",
-            border: "1px solid #ff69b4",
-          }}
-        >
-          Buy The Gift Card
-        </button>
-      </Link>
-      <Container
+      <div
         style={{
           marginLeft: "20%",
         }}
@@ -37,7 +28,7 @@ const GiftComponent = () => {
             color: "#66D3FA",
           }}
         >
-          <h4> What is Airbnb Gift Cards</h4>
+          <h4> What is Treehouse Cards</h4>
           <span
             style={{
               fontSize: "1rem",
@@ -45,8 +36,8 @@ const GiftComponent = () => {
               color: "black",
             }}
           >
-            An Airbnb gift card is a great present for a friend or family
-            member. <br />
+            An Treehouse card is a great present for a friend or family member.{" "}
+            <br />
           </span>
           <span
             style={{
@@ -56,7 +47,7 @@ const GiftComponent = () => {
             }}
           >
             {" "}
-            who loves to travel Airbnb gift cards allow the recipient the
+            who loves to travel Treehouse cards allow the recipient the
             flexibility <br />
           </span>
           <span
@@ -78,7 +69,8 @@ const GiftComponent = () => {
             color: "#66D3FA",
           }}
         >
-          <h4>How Airbnb Gift Cards Work</h4>
+          <hr style={{ width: "80%" }} />
+          <h4>How Treehouse Cards Work</h4>
           <span
             style={{
               fontSize: "1rem",
@@ -86,7 +78,7 @@ const GiftComponent = () => {
               color: "black",
             }}
           >
-            Airbnb offers gift cards that can be used on stays and experiences.{" "}
+            Treehouse offers cards that can be used on stays and experiences.{" "}
             <br />
           </span>
           <span
@@ -104,49 +96,95 @@ const GiftComponent = () => {
             <br />
           </span>
         </div>
-
-        <div
-          style={{
-            position: "relative",
-            alignItems: "center",
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "10%",
-          }}
-        >
-          <Col
-            style={{
-              position: "absolute",
-              left: "25%",
-            }}
-          >
-            <img
-              src="https://a0.muscache.com/im/pictures/5a262127-6957-4e1e-b87d-df6674c07d7a.jpg?im_w=480"
-              width="20%"
+        <hr style={{ width: "80%" }} />
+        <Row>
+          <Col xs={12} md={6} lg={6} xl={3}>
+            <div
               style={{
-                Top: "3rem",
-                transform: "rotate(60deg)",
+                position: "relative",
               }}
-            />
+            >
+              <h4
+                style={{
+                  position: "absolute",
+                  marginTop: "2rem",
+                  width: "200px",
+                  height: "200px",
+                  background: "pink",
+                  borderRadius: "20px",
+                  border: "1px solid rgb(255 255 255)",
+                  boxShadow: "rgb(122 122 122 / 20%) 10px 10px 10px 10px;",
+                }}
+              ></h4>
+              <BsFillTreeFill
+                style={{
+                  fontSize: "5rem",
+                  color: "#26580F",
+                  position: "absolute",
+                  marginTop: "3rem",
+                }}
+              />
+              <h4
+                style={{
+                  color: "#985321",
+                  fontFamily: "cursive",
+                  fontSize: "18px",
+                  marginLeft: "-1.5rem",
+                  fontWeight: "900",
+                  position: "absolute",
+                  marginTop: "3rem",
+                  marginLeft: "55px",
+                }}
+              >
+                Treehouse
+              </h4>
+              <h4
+                style={{
+                  color: "black",
+                  fontFamily: "cursive",
+                  fontSize: "12px",
+                  marginLeft: "-1.5rem",
+                  fontWeight: "900",
+                  position: "absolute",
+                  marginTop: "11rem",
+                  marginLeft: "1rem",
+                }}
+              >
+                Christmass card
+              </h4>
+            </div>
           </Col>
-          <Col
-            style={{
-              position: "absolute",
-              left: "15%",
-            }}
-          >
-            <img
-              src="https://a0.muscache.com/im/pictures/b3275f8d-4341-4800-bdf2-04be20e9112d.jpg?im_w=480"
-              style={{
-                Top: "3rem",
-                width: "20%",
-                transform: "rotate(120deg)",
-              }}
-            />
+          <Col xs={12} md={6} lg={6} xl={3}>
+            <div style={{ marginTop: "3rem" }}>
+              <div>
+                <h3
+                  style={{
+                    color: "#66D3FA",
+                  }}
+                >
+                  Treehouse Card
+                </h3>
+                <h6
+                  style={{
+                    color: "black",
+                  }}
+                >
+                  Amount :50$
+                </h6>
+                <StripeCheckout
+                  label="Pay Now"
+                  billingAddress
+                  shippingAddress
+                  amount={priceForStripe}
+                  panelLabel="Pay Now"
+                  token={onToken}
+                  stripeKey={publishableKey}
+                />
+              </div>
+            </div>
           </Col>
-        </div>
-      </Container>
-      <Footer />
+        </Row>
+      </div>
     </>
   );
 };

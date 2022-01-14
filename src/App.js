@@ -8,7 +8,7 @@ import Search from "./components/Search";
 import GiftComponent from "./components/GiftComponent";
 import { Switch } from "react-router";
 import HouseDetails from "./components/HouseDetails";
-import PaymentComponent from "./components/PaymentComponent";
+
 import "./App.css";
 import FavoriteProvider from "./store/Favorite";
 import Favorite from "./components/Favorite";
@@ -19,7 +19,7 @@ function App() {
     <div>
       <FavoriteProvider>
         <BrowserRouter>
-          <MyNavbar brand="Airbnb" />
+          <MyNavbar />
           <Switch>
             <Route
               path="/"
@@ -44,11 +44,6 @@ function App() {
             <Route path="/GiftComponent" exact component={GiftComponent} />
             <Route path="/details/:houseId" component={HouseDetails} />
             <Route path="/AboutComponent" exact component={AboutComponent} />
-            <Route
-              path="/PaymentComponent"
-              exact
-              component={PaymentComponent}
-            />
           </Switch>
         </BrowserRouter>
       </FavoriteProvider>

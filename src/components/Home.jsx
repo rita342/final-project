@@ -25,15 +25,17 @@ export default function Home() {
         }}
       >
         <img
-          src="https://treehousevineyards.com/images/hero/homeHero.jpg?nf_resize=fit&w=1440"
+          src="https://media.istockphoto.com/photos/wooden-house-in-front-of-nature-background-picture-id1068391138?k=20&m=1068391138&s=170667a&w=0&h=K8LEj2eqoC7pyypXDDV1fEALtS3sFsuWESMKxCqxW68="
           layout="fill"
           objectFit="cover"
           style={{
             backgroundRepeat: "no-repeat",
             width: "100%",
-            height: "100%",
+            height: "500px",
             borderBottomLeftRadius: "100% 100% ",
             borderBottomRightRadius: "100% 100%",
+            // boxShadow:
+            //  "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
           }}
         />
         <div
@@ -43,11 +45,8 @@ export default function Home() {
             height: "100%",
             top: "0",
             left: "0",
-
-            // "linear-gradient(0deg, #f3ec78, #af4261)",
             background:
-              "linear-gradient( 2deg, rgb(0 0 0 / 0%), rgb(6 6 6 / 74%))",
-            //  background: "rgb(10 32 6 / 20%)",
+              "linear-gradient(18deg , rgb(217 205 205 / 10%), rgb(14 15 14 / 54%));",
             borderBottomLeftRadius: "100% 100% ",
             borderBottomRightRadius: "100% 100%",
           }}
